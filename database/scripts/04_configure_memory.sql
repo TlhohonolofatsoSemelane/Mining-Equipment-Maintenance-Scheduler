@@ -1,0 +1,7 @@
+ALTER SYSTEM SET sga_target = 512M SCOPE=SPFILE;
+ALTER SYSTEM SET pga_aggregate_target = 256M SCOPE=SPFILE;
+ALTER SYSTEM SET shared_pool_size = 200M SCOPE=SPFILE;
+ALTER SYSTEM SET db_cache_size = 200M SCOPE=SPFILE;
+
+SHOW PARAMETER sga_target;
+SHOW PARAMETER pga_aggregate_target;

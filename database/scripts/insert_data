@@ -1,0 +1,1086 @@
+INSERT INTO DEPARTMENTS VALUES (seq_department_id.NEXTVAL, 'Operations', 'Main Site A', 5000000, NULL, SYSDATE);
+INSERT INTO DEPARTMENTS VALUES (seq_department_id.NEXTVAL, 'Maintenance', 'Workshop Complex', 3000000, NULL, SYSDATE);
+INSERT INTO DEPARTMENTS VALUES (seq_department_id.NEXTVAL, 'Engineering', 'Technical Center', 2500000, NULL, SYSDATE);
+INSERT INTO DEPARTMENTS VALUES (seq_department_id.NEXTVAL, 'Fleet Management', 'Central Depot', 4000000, NULL, SYSDATE);
+INSERT INTO DEPARTMENTS VALUES (seq_department_id.NEXTVAL, 'Safety & Compliance', 'Admin Building', 1500000, NULL, SYSDATE);
+INSERT INTO DEPARTMENTS VALUES (seq_department_id.NEXTVAL, 'Logistics', 'Supply Hub', 2000000, NULL, SYSDATE);
+INSERT INTO DEPARTMENTS VALUES (seq_department_id.NEXTVAL, 'Production', 'Site B', 6000000, NULL, SYSDATE);
+INSERT INTO DEPARTMENTS VALUES (seq_department_id.NEXTVAL, 'Quality Control', 'Lab Facility', 1800000, NULL, SYSDATE);
+INSERT INTO DEPARTMENTS VALUES (seq_department_id.NEXTVAL, 'Environmental', 'Green Office', 1200000, NULL, SYSDATE);
+INSERT INTO DEPARTMENTS VALUES (seq_department_id.NEXTVAL, 'Human Resources', 'HR Center', 1000000, NULL, SYSDATE);
+
+COMMIT;
+
+SET DEFINE OFF;
+
+INSERT INTO SUPERVISORS VALUES (seq_supervisor_id.NEXTVAL, 'John', 'Smith', '+250788111001', 'john.smith@mining.com', 1, TO_DATE('2020-01-15', 'YYYY-MM-DD'));
+INSERT INTO SUPERVISORS VALUES (seq_supervisor_id.NEXTVAL, 'Sarah', 'Johnson', '+250788111002', 'sarah.johnson@mining.com', 2, TO_DATE('2019-03-20', 'YYYY-MM-DD'));
+INSERT INTO SUPERVISORS VALUES (seq_supervisor_id.NEXTVAL, 'Michael', 'Williams', '+250788111003', 'michael.williams@mining.com', 3, TO_DATE('2021-05-10', 'YYYY-MM-DD'));
+INSERT INTO SUPERVISORS VALUES (seq_supervisor_id.NEXTVAL, 'Emily', 'Brown', '+250788111004', 'emily.brown@mining.com', 4, TO_DATE('2018-07-25', 'YYYY-MM-DD'));
+INSERT INTO SUPERVISORS VALUES (seq_supervisor_id.NEXTVAL, 'David', 'Jones', '+250788111005', 'david.jones@mining.com', 5, TO_DATE('2020-09-12', 'YYYY-MM-DD'));
+INSERT INTO SUPERVISORS VALUES (seq_supervisor_id.NEXTVAL, 'Jennifer', 'Davis', '+250788111006', 'jennifer.davis@mining.com', 1, TO_DATE('2019-11-08', 'YYYY-MM-DD'));
+INSERT INTO SUPERVISORS VALUES (seq_supervisor_id.NEXTVAL, 'Robert', 'Miller', '+250788111007', 'robert.miller@mining.com', 6, TO_DATE('2021-02-14', 'YYYY-MM-DD'));
+INSERT INTO SUPERVISORS VALUES (seq_supervisor_id.NEXTVAL, 'Lisa', 'Wilson', '+250788111008', 'lisa.wilson@mining.com', 7, TO_DATE('2020-04-22', 'YYYY-MM-DD'));
+INSERT INTO SUPERVISORS VALUES (seq_supervisor_id.NEXTVAL, 'James', 'Moore', '+250788111009', 'james.moore@mining.com', 2, TO_DATE('2019-06-30', 'YYYY-MM-DD'));
+INSERT INTO SUPERVISORS VALUES (seq_supervisor_id.NEXTVAL, 'Mary', 'Taylor', '+250788111010', 'mary.taylor@mining.com', 8, TO_DATE('2021-08-18', 'YYYY-MM-DD'));
+INSERT INTO SUPERVISORS VALUES (seq_supervisor_id.NEXTVAL, 'William', 'Anderson', '+250788111011', 'william.anderson@mining.com', 3, TO_DATE('2020-10-05', 'YYYY-MM-DD'));
+INSERT INTO SUPERVISORS VALUES (seq_supervisor_id.NEXTVAL, 'Patricia', 'Thomas', '+250788111012', 'patricia.thomas@mining.com', 9, TO_DATE('2019-12-20', 'YYYY-MM-DD'));
+INSERT INTO SUPERVISORS VALUES (seq_supervisor_id.NEXTVAL, 'Richard', 'Jackson', '+250788111013', 'richard.jackson@mining.com', 4, TO_DATE('2021-01-10', 'YYYY-MM-DD'));
+INSERT INTO SUPERVISORS VALUES (seq_supervisor_id.NEXTVAL, 'Linda', 'White', '+250788111014', 'linda.white@mining.com', 10, TO_DATE('2020-03-15', 'YYYY-MM-DD'));
+INSERT INTO SUPERVISORS VALUES (seq_supervisor_id.NEXTVAL, 'Charles', 'Harris', '+250788111015', 'charles.harris@mining.com', 5, TO_DATE('2019-05-28', 'YYYY-MM-DD'));
+INSERT INTO SUPERVISORS VALUES (seq_supervisor_id.NEXTVAL, 'Barbara', 'Martin', '+250788111016', 'barbara.martin@mining.com', 1, TO_DATE('2021-07-12', 'YYYY-MM-DD'));
+INSERT INTO SUPERVISORS VALUES (seq_supervisor_id.NEXTVAL, 'Joseph', 'Thompson', '+250788111017', 'joseph.thompson@mining.com', 6, TO_DATE('2020-09-25', 'YYYY-MM-DD'));
+INSERT INTO SUPERVISORS VALUES (seq_supervisor_id.NEXTVAL, 'Susan', 'Garcia', '+250788111018', 'susan.garcia@mining.com', 2, TO_DATE('2019-11-30', 'YYYY-MM-DD'));
+INSERT INTO SUPERVISORS VALUES (seq_supervisor_id.NEXTVAL, 'Thomas', 'Martinez', '+250788111019', 'thomas.martinez@mining.com', 7, TO_DATE('2021-02-08', 'YYYY-MM-DD'));
+INSERT INTO SUPERVISORS VALUES (seq_supervisor_id.NEXTVAL, 'Jessica', 'Robinson', '+250788111020', 'jessica.robinson@mining.com', 3, TO_DATE('2020-04-16', 'YYYY-MM-DD'));
+INSERT INTO SUPERVISORS VALUES (seq_supervisor_id.NEXTVAL, 'Daniel', 'Clark', '+250788111021', 'daniel.clark@mining.com', 8, TO_DATE('2019-06-22', 'YYYY-MM-DD'));
+INSERT INTO SUPERVISORS VALUES (seq_supervisor_id.NEXTVAL, 'Karen', 'Rodriguez', '+250788111022', 'karen.rodriguez@mining.com', 4, TO_DATE('2021-08-30', 'YYYY-MM-DD'));
+INSERT INTO SUPERVISORS VALUES (seq_supervisor_id.NEXTVAL, 'Paul', 'Lewis', '+250788111023', 'paul.lewis@mining.com', 9, TO_DATE('2020-10-14', 'YYYY-MM-DD'));
+INSERT INTO SUPERVISORS VALUES (seq_supervisor_id.NEXTVAL, 'Nancy', 'Lee', '+250788111024', 'nancy.lee@mining.com', 5, TO_DATE('2019-12-05', 'YYYY-MM-DD'));
+INSERT INTO SUPERVISORS VALUES (seq_supervisor_id.NEXTVAL, 'Mark', 'Walker', '+250788111025', 'mark.walker@mining.com', 10, TO_DATE('2021-03-20', 'YYYY-MM-DD'));
+
+COMMIT;
+
+INSERT INTO departments 
+VALUES (10, 'New Department', 'Main Site', 3000000, NULL, SYSDATE);
+
+UPDATE DEPARTMENTS SET MANAGER_ID = 1 WHERE DEPARTMENT_ID = 1;
+UPDATE DEPARTMENTS SET MANAGER_ID = 2 WHERE DEPARTMENT_ID = 2;
+UPDATE DEPARTMENTS SET MANAGER_ID = 3 WHERE DEPARTMENT_ID = 3;
+UPDATE DEPARTMENTS SET MANAGER_ID = 4 WHERE DEPARTMENT_ID = 4;
+UPDATE DEPARTMENTS SET MANAGER_ID = 5 WHERE DEPARTMENT_ID = 5;
+UPDATE DEPARTMENTS SET MANAGER_ID = 7 WHERE DEPARTMENT_ID = 6;
+UPDATE DEPARTMENTS SET MANAGER_ID = 8 WHERE DEPARTMENT_ID = 7;
+UPDATE DEPARTMENTS SET MANAGER_ID = 10 WHERE DEPARTMENT_ID = 8;
+UPDATE DEPARTMENTS SET MANAGER_ID = 12 WHERE DEPARTMENT_ID = 9;
+UPDATE DEPARTMENTS SET MANAGER_ID = 14 WHERE DEPARTMENT_ID = 10;
+COMMIT;
+
+SELECT supervisor_id, first_name, last_name 
+FROM supervisors
+ORDER BY supervisor_id;
+
+INSERT INTO supervisors 
+VALUES (14, 'Linda', 'White', '+250788111014', 'linda.white@mining.com', 10, TO_DATE('2020-03-15','YYYY-MM-DD'));
+
+COMMIT;
+
+UPDATE departments 
+SET manager_id = 14 
+WHERE department_id = 10;
+
+COMMIT;
+
+INSERT INTO MAINTENANCE_CREW VALUES (seq_crew_id.NEXTVAL, 'Peter', 'Anderson', 'Hydraulics', '+250788220001', 'crew1@mining.com', TO_DATE('2022-01-15', 'YYYY-MM-DD'), 2, 'Active');
+INSERT INTO MAINTENANCE_CREW VALUES (seq_crew_id.NEXTVAL, 'Mary', 'Thompson', 'Engine Repair', '+250788220002', 'crew2@mining.com', TO_DATE('2021-05-20', 'YYYY-MM-DD'), 2, 'Active');
+INSERT INTO MAINTENANCE_CREW VALUES (seq_crew_id.NEXTVAL, 'James', 'Wilson', 'Electrical Systems', '+250788220003', 'crew3@mining.com', TO_DATE('2022-03-10', 'YYYY-MM-DD'), 2, 'Active');
+INSERT INTO MAINTENANCE_CREW VALUES (seq_crew_id.NEXTVAL, 'Patricia', 'Moore', 'Welding', '+250788220004', 'crew4@mining.com', TO_DATE('2021-11-25', 'YYYY-MM-DD'), 3, 'Active');
+INSERT INTO MAINTENANCE_CREW VALUES (seq_crew_id.NEXTVAL, 'Robert', 'Taylor', 'General Maintenance', '+250788220005', 'crew5@mining.com', TO_DATE('2022-07-12', 'YYYY-MM-DD'), 1, 'Active');
+INSERT INTO MAINTENANCE_CREW VALUES (seq_crew_id.NEXTVAL, 'Jennifer', 'Clark', 'Hydraulics', '+250788220006', 'crew6@mining.com', TO_DATE('2021-09-08', 'YYYY-MM-DD'), 2, 'Active');
+INSERT INTO MAINTENANCE_CREW VALUES (seq_crew_id.NEXTVAL, 'Michael', 'Lewis', 'Engine Repair', '+250788220007', 'crew7@mining.com', TO_DATE('2022-02-14', 'YYYY-MM-DD'), 3, 'Active');
+INSERT INTO MAINTENANCE_CREW VALUES (seq_crew_id.NEXTVAL, 'Linda', 'Walker', 'Electrical Systems', '+250788220008', 'crew8@mining.com', TO_DATE('2021-12-22', 'YYYY-MM-DD'), 4, 'Active');
+INSERT INTO MAINTENANCE_CREW VALUES (seq_crew_id.NEXTVAL, 'David', 'Hall', 'Welding', '+250788220009', 'crew9@mining.com', TO_DATE('2022-06-30', 'YYYY-MM-DD'), 5, 'Active');
+INSERT INTO MAINTENANCE_CREW VALUES (seq_crew_id.NEXTVAL, 'Barbara', 'Allen', 'General Maintenance', '+250788220010', 'crew10@mining.com', TO_DATE('2021-08-18', 'YYYY-MM-DD'), 1, 'Active');
+INSERT INTO MAINTENANCE_CREW VALUES (seq_crew_id.NEXTVAL, 'William', 'Young', 'Hydraulics', '+250788220011', 'crew11@mining.com', TO_DATE('2022-10-05', 'YYYY-MM-DD'), 2, 'Active');
+INSERT INTO MAINTENANCE_CREW VALUES (seq_crew_id.NEXTVAL, 'Elizabeth', 'King', 'Engine Repair', '+250788220012', 'crew12@mining.com', TO_DATE('2021-04-20', 'YYYY-MM-DD'), 3, 'Active');
+INSERT INTO MAINTENANCE_CREW VALUES (seq_crew_id.NEXTVAL, 'Richard', 'Wright', 'Electrical Systems', '+250788220013', 'crew13@mining.com', TO_DATE('2022-01-10', 'YYYY-MM-DD'), 4, 'Active');
+INSERT INTO MAINTENANCE_CREW VALUES (seq_crew_id.NEXTVAL, 'Susan', 'Lopez', 'Welding', '+250788220014', 'crew14@mining.com', TO_DATE('2021-07-15', 'YYYY-MM-DD'), 5, 'Active');
+INSERT INTO MAINTENANCE_CREW VALUES (seq_crew_id.NEXTVAL, 'Joseph', 'Hill', 'General Maintenance', '+250788220015', 'crew15@mining.com', TO_DATE('2022-05-28', 'YYYY-MM-DD'), 1, 'Active');
+INSERT INTO MAINTENANCE_CREW VALUES (seq_crew_id.NEXTVAL, 'Jessica', 'Scott', 'Hydraulics', '+250788220016', 'crew16@mining.com', TO_DATE('2021-11-12', 'YYYY-MM-DD'), 2, 'Active');
+INSERT INTO MAINTENANCE_CREW VALUES (seq_crew_id.NEXTVAL, 'Thomas', 'Green', 'Engine Repair', '+250788220017', 'crew17@mining.com', TO_DATE('2022-09-25', 'YYYY-MM-DD'), 3, 'Active');
+INSERT INTO MAINTENANCE_CREW VALUES (seq_crew_id.NEXTVAL, 'Sarah', 'Adams', 'Electrical Systems', '+250788220018', 'crew18@mining.com', TO_DATE('2021-03-30', 'YYYY-MM-DD'), 4, 'Active');
+INSERT INTO MAINTENANCE_CREW VALUES (seq_crew_id.NEXTVAL, 'Charles', 'Baker', 'Welding', '+250788220019', 'crew19@mining.com', TO_DATE('2022-02-08', 'YYYY-MM-DD'), 5, 'Active');
+INSERT INTO MAINTENANCE_CREW VALUES (seq_crew_id.NEXTVAL, 'Nancy', 'Gonzalez', 'General Maintenance', '+250788220020', 'crew20@mining.com', TO_DATE('2021-10-16', 'YYYY-MM-DD'), 1, 'On-Leave');
+
+
+INSERT INTO MINING_SITES VALUES (seq_site_id.NEXTVAL, 'North Pit Alpha', 'Northern Region, GPS: -1.9403, 29.8739', 'Open-Pit', 5000, 'Active', 1);
+INSERT INTO MINING_SITES VALUES (seq_site_id.NEXTVAL, 'South Pit Beta', 'Southern Region, GPS: -2.1234, 29.5678', 'Open-Pit', 4500, 'Active', 2);
+INSERT INTO MINING_SITES VALUES (seq_site_id.NEXTVAL, 'East Underground Mine', 'Eastern Region, GPS: -1.7890, 30.1234', 'Underground', 3000, 'Active', 3);
+INSERT INTO MINING_SITES VALUES (seq_site_id.NEXTVAL, 'West Processing Plant', 'Western Region, GPS: -1.8765, 29.4321', 'Processing Plant', 8000, 'Active', 4);
+INSERT INTO MINING_SITES VALUES (seq_site_id.NEXTVAL, 'Central Quarry', 'Central Region, GPS: -1.9567, 29.7890', 'Quarry', 3500, 'Active', 5);
+INSERT INTO MINING_SITES VALUES (seq_site_id.NEXTVAL, 'North Pit Gamma', 'Northern Region, GPS: -1.8901, 29.9012', 'Open-Pit', 4800, 'Active', 1);
+INSERT INTO MINING_SITES VALUES (seq_site_id.NEXTVAL, 'South Underground', 'Southern Region, GPS: -2.2345, 29.6789', 'Underground', 2800, 'Active', 2);
+INSERT INTO MINING_SITES VALUES (seq_site_id.NEXTVAL, 'East Processing', 'Eastern Region, GPS: -1.7012, 30.2345', 'Processing Plant', 7500, 'Active', 3);
+INSERT INTO MINING_SITES VALUES (seq_site_id.NEXTVAL, 'West Quarry Delta', 'Western Region, GPS: -1.8234, 29.3456', 'Quarry', 4000, 'Active', 4);
+INSERT INTO MINING_SITES VALUES (seq_site_id.NEXTVAL, 'Reserve Site A', 'Central Region, GPS: -1.9678, 29.8123', 'Open-Pit', 3200, 'Under-Development', 5);
+INSERT INTO MINING_SITES VALUES (seq_site_id.NEXTVAL, 'Reserve Site B', 'Northern Region, GPS: -1.8567, 29.9234', 'Open-Pit', NULL, 'Under-Development', 1);
+INSERT INTO MINING_SITES VALUES (seq_site_id.NEXTVAL, 'Old Mine Site', 'Southern Region, GPS: -2.1890, 29.5123', 'Underground', NULL, 'Closed', 2);
+INSERT INTO MINING_SITES VALUES (seq_site_id.NEXTVAL, 'New Exploration', 'Eastern Region, GPS: -1.7456, 30.1789', 'Open-Pit', NULL, 'Under-Development', 3);
+INSERT INTO MINING_SITES VALUES (seq_site_id.NEXTVAL, 'Processing Hub 2', 'Western Region, GPS: -1.8901, 29.4678', 'Processing Plant', 9000, 'Active', 4);
+INSERT INTO MINING_SITES VALUES (seq_site_id.NEXTVAL, 'Quarry Extension', 'Central Region, GPS: -1.9123, 29.7567', 'Quarry', 3800, 'Active', 5);
+
+INSERT INTO SHIFTS VALUES (seq_shift_id.NEXTVAL, 'Day Shift', TO_TIMESTAMP('2025-01-01 06:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2025-01-01 14:00:00', 'YYYY-MM-DD HH24:MI:SS'), 8);
+INSERT INTO SHIFTS VALUES (seq_shift_id.NEXTVAL, 'Afternoon Shift', TO_TIMESTAMP('2025-01-01 14:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2025-01-01 22:00:00', 'YYYY-MM-DD HH24:MI:SS'), 8);
+INSERT INTO SHIFTS VALUES (seq_shift_id.NEXTVAL, 'Night Shift', TO_TIMESTAMP('2025-01-01 22:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2025-01-02 06:00:00', 'YYYY-MM-DD HH24:MI:SS'), 8);
+COMMIT;
+
+INSERT INTO PUBLIC_HOLIDAYS VALUES (seq_holiday_id.NEXTVAL, 'New Year Day', TO_DATE('2025-01-01', 'YYYY-MM-DD'), 'Rwanda', 'New Year celebration');
+INSERT INTO PUBLIC_HOLIDAYS VALUES (seq_holiday_id.NEXTVAL, 'Genocide Memorial Day', TO_DATE('2025-04-07', 'YYYY-MM-DD'), 'Rwanda', 'Commemoration of genocide victims');
+INSERT INTO PUBLIC_HOLIDAYS VALUES (seq_holiday_id.NEXTVAL, 'Labour Day', TO_DATE('2025-05-01', 'YYYY-MM-DD'), 'Rwanda', 'International Workers Day');
+INSERT INTO PUBLIC_HOLIDAYS VALUES (seq_holiday_id.NEXTVAL, 'Independence Day', TO_DATE('2025-07-01', 'YYYY-MM-DD'), 'Rwanda', 'National Independence Day');
+INSERT INTO PUBLIC_HOLIDAYS VALUES (seq_holiday_id.NEXTVAL, 'Liberation Day', TO_DATE('2025-07-04', 'YYYY-MM-DD'), 'Rwanda', 'Liberation Day celebration');
+INSERT INTO PUBLIC_HOLIDAYS VALUES (seq_holiday_id.NEXTVAL, 'Umuganura Day', TO_DATE('2025-08-01', 'YYYY-MM-DD'), 'Rwanda', 'National Harvest Day');
+INSERT INTO PUBLIC_HOLIDAYS VALUES (seq_holiday_id.NEXTVAL, 'Christmas Day', TO_DATE('2025-12-25', 'YYYY-MM-DD'), 'Rwanda', 'Christmas celebration');
+INSERT INTO PUBLIC_HOLIDAYS VALUES (seq_holiday_id.NEXTVAL, 'Boxing Day', TO_DATE('2025-12-26', 'YYYY-MM-DD'), 'Rwanda', 'Day after Christmas');
+COMMIT;
+
+SELECT department_id, department_name FROM departments;
+
+INSERT INTO equipment VALUES (seq_equipment_id.NEXTVAL, 'Loader', 'Toyota 8FGU25', 'EQ-LD-115', TO_DATE('2021-05-17','YYYY-MM-DD'), 3, 'Available', NULL, 5);
+
+INSERT INTO equipment VALUES (seq_equipment_id.NEXTVAL, 'Loader', 'Hyster H2.5FT', 'EQ-LD-116', TO_DATE('2019-07-29','YYYY-MM-DD'), 3, 'Maintenance', TO_DATE('2024-11-09','YYYY-MM-DD'), 6);
+
+INSERT INTO equipment VALUES (seq_equipment_id.NEXTVAL, 'Haul Truck', 'CAT 740', 'EQ-HT-117', TO_DATE('2020-01-25','YYYY-MM-DD'), 35, 'Available', NULL, 7);
+
+INSERT INTO equipment VALUES (seq_equipment_id.NEXTVAL, 'Haul Truck', 'Komatsu HM400', 'EQ-HT-118', TO_DATE('2018-03-13','YYYY-MM-DD'), 38, 'In-Use', TO_DATE('2024-11-04','YYYY-MM-DD'), 8);
+
+INSERT INTO equipment VALUES (seq_equipment_id.NEXTVAL, 'Grader', 'Bomag BW213', 'EQ-GR-119', TO_DATE('2019-10-19','YYYY-MM-DD'), 12, 'Available', NULL, 9);
+
+INSERT INTO equipment VALUES (seq_equipment_id.NEXTVAL, 'Grader', 'CAT CP56B', 'EQ-GR-120', TO_DATE('2017-02-09','YYYY-MM-DD'), 11, 'Maintenance', TO_DATE('2024-11-07','YYYY-MM-DD'), 10);
+
+COMMIT;
+
+SELECT COUNT(*) FROM equipment;
+
+SELECT equipment_id, equipment_type, serial_number, department_id
+FROM equipment
+ORDER BY equipment_id;
+
+-- OPERATORS (20 rows)
+
+INSERT INTO operators VALUES (seq_operator_id.NEXTVAL, 'Peter', 'Habimana', 'LIC-OP-201', TO_DATE('2026-05-10','YYYY-MM-DD'),
+'+250788440001', 'peter.h@mining.com', TO_DATE('2018-02-15','YYYY-MM-DD'), 'Active', 1);
+
+INSERT INTO operators VALUES (seq_operator_id.NEXTVAL, 'Jean', 'Uwimana', 'LIC-OP-202', TO_DATE('2027-06-12','YYYY-MM-DD'),
+'+250788440002', 'jean.u@mining.com', TO_DATE('2019-03-18','YYYY-MM-DD'), 'Active', 2);
+
+INSERT INTO operators VALUES (seq_operator_id.NEXTVAL, 'Samuel', 'Mukamana', 'LIC-OP-203', TO_DATE('2025-07-14','YYYY-MM-DD'),
+'+250788440003', 'samuel.m@mining.com', TO_DATE('2020-04-20','YYYY-MM-DD'), 'On-Leave', 3);
+
+INSERT INTO operators VALUES (seq_operator_id.NEXTVAL, 'Alice', 'Mukantwali', 'LIC-OP-204', TO_DATE('2028-08-15','YYYY-MM-DD'),
+'+250788440004', 'alice.m@mining.com', TO_DATE('2017-05-22','YYYY-MM-DD'), 'Active', 4);
+
+INSERT INTO operators VALUES (seq_operator_id.NEXTVAL, 'Eric', 'Nkurunziza', 'LIC-OP-205', TO_DATE('2026-09-16','YYYY-MM-DD'),
+'+250788440005', 'eric.n@mining.com', TO_DATE('2018-06-23','YYYY-MM-DD'), 'Active', 5);
+
+INSERT INTO operators VALUES (seq_operator_id.NEXTVAL, 'Daniel', 'Niyonzima', 'LIC-OP-206', TO_DATE('2025-10-11','YYYY-MM-DD'),
+'+250788440006', 'daniel.n@mining.com', TO_DATE('2019-07-29','YYYY-MM-DD'), 'Active', 6);
+
+INSERT INTO operators VALUES (seq_operator_id.NEXTVAL, 'Grace', 'Uwase', 'LIC-OP-207', TO_DATE('2027-11-01','YYYY-MM-DD'),
+'+250788440007', 'grace.u@mining.com', TO_DATE('2021-08-30','YYYY-MM-DD'), 'Active', 7);
+
+INSERT INTO operators VALUES (seq_operator_id.NEXTVAL, 'Patrick', 'Bizimana', 'LIC-OP-208', TO_DATE('2026-12-20','YYYY-MM-DD'),
+'+250788440008', 'patrick.b@mining.com', TO_DATE('2016-09-17','YYYY-MM-DD'), 'Inactive', 8);
+
+INSERT INTO operators VALUES (seq_operator_id.NEXTVAL, 'Joseph', 'Hategeka', 'LIC-OP-209', TO_DATE('2025-01-25','YYYY-MM-DD'),
+'+250788440009', 'joseph.h@mining.com', TO_DATE('2017-10-10','YYYY-MM-DD'), 'Active', 9);
+
+INSERT INTO operators VALUES (seq_operator_id.NEXTVAL, 'Diane', 'Mukamana', 'LIC-OP-210', TO_DATE('2029-02-14','YYYY-MM-DD'),
+'+250788440010', 'diane.m@mining.com', TO_DATE('2020-11-21','YYYY-MM-DD'), 'Active', 10);
+
+INSERT INTO operators VALUES (seq_operator_id.NEXTVAL, 'Albert', 'Nsanzimana', 'LIC-OP-211', TO_DATE('2026-03-08','YYYY-MM-DD'),
+'+250788440011', 'albert.n@mining.com', TO_DATE('2018-12-12','YYYY-MM-DD'), 'Active', 11);
+
+INSERT INTO operators VALUES (seq_operator_id.NEXTVAL, 'Beatrice', 'Ingabire', 'LIC-OP-212', TO_DATE('2027-04-09','YYYY-MM-DD'),
+'+250788440012', 'beatrice.i@mining.com', TO_DATE('2019-01-19','YYYY-MM-DD'), 'On-Leave', 12);
+
+INSERT INTO operators VALUES (seq_operator_id.NEXTVAL, 'Claude', 'Nshimiyimana', 'LIC-OP-213', TO_DATE('2028-05-06','YYYY-MM-DD'),
+'+250788440013', 'claude.n@mining.com', TO_DATE('2021-02-24','YYYY-MM-DD'), 'Active', 13);
+
+INSERT INTO operators VALUES (seq_operator_id.NEXTVAL, 'Yvonne', 'Uwamahoro', 'LIC-OP-214', TO_DATE('2026-06-18','YYYY-MM-DD'),
+'+250788440014', 'yvonne.u@mining.com', TO_DATE('2017-03-03','YYYY-MM-DD'), 'Active', 15);
+
+INSERT INTO operators VALUES (seq_operator_id.NEXTVAL, 'Kevin', 'Habumuremyi', 'LIC-OP-215', TO_DATE('2025-07-30','YYYY-MM-DD'),
+'+250788440015', 'kevin.h@mining.com', TO_DATE('2019-04-04','YYYY-MM-DD'), 'Inactive', 16);
+
+INSERT INTO operators VALUES (seq_operator_id.NEXTVAL, 'Chantal', 'Mukandoli', 'LIC-OP-216', TO_DATE('2028-08-22','YYYY-MM-DD'),
+'+250788440016', 'chantal.m@mining.com', TO_DATE('2020-05-25','YYYY-MM-DD'), 'Active', 17);
+
+INSERT INTO operators VALUES (seq_operator_id.NEXTVAL, 'Robert', 'Twizeyimana', 'LIC-OP-217', TO_DATE('2026-09-10','YYYY-MM-DD'),
+'+250788440017', 'robert.t@mining.com', TO_DATE('2018-06-06','YYYY-MM-DD'), 'Active', 18);
+
+INSERT INTO operators VALUES (seq_operator_id.NEXTVAL, 'Esther', 'Mukamurenzi', 'LIC-OP-218', TO_DATE('2027-10-12','YYYY-MM-DD'),
+'+250788440018', 'esther.m@mining.com', TO_DATE('2021-07-13','YYYY-MM-DD'), 'Active', 19);
+
+INSERT INTO operators VALUES (seq_operator_id.NEXTVAL, 'Brian', 'Ndahiro', 'LIC-OP-219', TO_DATE('2025-11-23','YYYY-MM-DD'),
+'+250788440019', 'brian.n@mining.com', TO_DATE('2019-08-08','YYYY-MM-DD'), 'Active', 20);
+
+INSERT INTO operators VALUES (seq_operator_id.NEXTVAL, 'Linda', 'Nkurunziza', 'LIC-OP-220', TO_DATE('2029-12-31','YYYY-MM-DD'),
+'+250788440020', 'linda.n@mining.com', TO_DATE('2022-01-01','YYYY-MM-DD'), 'Active', 21);
+
+COMMIT;
+
+-- Completed assignments (past dates)
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (1, 1, 1, 1, 1, DATE '2025-12-01', TIMESTAMP '2025-12-01 06:00:00', TIMESTAMP '2025-12-01 14:00:00', 'Completed');
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (2, 2, 2, 1, 2, DATE '2025-12-01', TIMESTAMP '2025-12-01 14:00:00', TIMESTAMP '2025-12-01 22:00:00', 'Completed');
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (3, 3, 3, 2, 3, DATE '2025-12-01', TIMESTAMP '2025-12-01 22:00:00', TIMESTAMP '2025-12-02 06:00:00', 'Completed');
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (4, 4, 4, 2, 1, DATE '2025-12-02', TIMESTAMP '2025-12-02 06:00:00', TIMESTAMP '2025-12-02 14:00:00', 'Completed');
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (5, 5, 5, 3, 2, DATE '2025-12-02', TIMESTAMP '2025-12-02 14:00:00', TIMESTAMP '2025-12-02 22:00:00', 'Completed');
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (6, 6, 6, 3, 1, DATE '2025-12-03', TIMESTAMP '2025-12-03 06:00:00', TIMESTAMP '2025-12-03 14:00:00', 'Completed');
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (7, 7, 7, 4, 2, DATE '2025-12-03', TIMESTAMP '2025-12-03 14:00:00', TIMESTAMP '2025-12-03 22:00:00', 'Completed');
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (8, 8, 8, 4, 1, DATE '2025-12-04', TIMESTAMP '2025-12-04 06:00:00', TIMESTAMP '2025-12-04 14:00:00', 'Completed');
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (9, 9, 9, 5, 2, DATE '2025-12-04', TIMESTAMP '2025-12-04 14:00:00', TIMESTAMP '2025-12-04 22:00:00', 'Completed');
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (10, 10, 10, 5, 1, DATE '2025-12-05', TIMESTAMP '2025-12-05 06:00:00', TIMESTAMP '2025-12-05 14:00:00', 'Completed');
+
+-- Current assignments (December 7th)
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (11, 1, 1, 1, 1, DATE '2025-12-07', TIMESTAMP '2025-12-07 06:00:00', TIMESTAMP '2025-12-07 14:00:00', 'Completed');
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (12, 2, 2, 2, 1, DATE '2025-12-07', TIMESTAMP '2025-12-07 06:00:00', TIMESTAMP '2025-12-07 14:00:00', 'Completed');
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (13, 3, 3, 3, 2, DATE '2025-12-07', TIMESTAMP '2025-12-07 14:00:00', NULL, 'In-Progress');
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (14, 4, 4, 4, 2, DATE '2025-12-07', TIMESTAMP '2025-12-07 14:00:00', NULL, 'In-Progress');
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (15, 5, 5, 5, 3, DATE '2025-12-07', TIMESTAMP '2025-12-07 22:00:00', NULL, 'Scheduled');
+
+-- Future assignments
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (16, 6, 6, 1, 1, DATE '2025-12-08', TIMESTAMP '2025-12-08 06:00:00', NULL, 'Scheduled');
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (17, 7, 7, 2, 2, DATE '2025-12-08', TIMESTAMP '2025-12-08 14:00:00', NULL, 'Scheduled');
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (18, 8, 8, 3, 1, DATE '2025-12-09', TIMESTAMP '2025-12-09 06:00:00', NULL, 'Scheduled');
+
+-- Cancelled assignments
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (19, 9, 9, 4, 2, DATE '2025-12-06', TIMESTAMP '2025-12-06 14:00:00', NULL, 'Cancelled');
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (20, 10, 10, 5, 3, DATE '2025-12-05', TIMESTAMP '2025-12-05 22:00:00', NULL, 'Cancelled');
+
+COMMIT;
+
+-- Check EQUIPMENT IDs
+SELECT EQUIPMENT_ID FROM EQUIPMENT ORDER BY EQUIPMENT_ID;
+
+-- Check OPERATORS IDs
+SELECT OPERATOR_ID FROM OPERATORS ORDER BY OPERATOR_ID;
+
+-- Check MINING_SITES IDs
+SELECT SITE_ID FROM MINING_SITES ORDER BY SITE_ID;
+
+-- Check SHIFTS IDs
+SELECT SHIFT_ID FROM SHIFTS ORDER BY SHIFT_ID;
+
+DELETE FROM EQUIPMENT_ASSIGNMENT;
+COMMIT;
+
+-- Completed assignments (past dates)
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (1, 1, 1, 1, 1, DATE '2025-12-01', TIMESTAMP '2025-12-01 06:00:00', TIMESTAMP '2025-12-01 14:00:00', 'Completed');
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (2, 5, 2, 2, 2, DATE '2025-12-01', TIMESTAMP '2025-12-01 14:00:00', TIMESTAMP '2025-12-01 22:00:00', 'Completed');
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (3, 6, 3, 3, 3, DATE '2025-12-01', TIMESTAMP '2025-12-01 22:00:00', TIMESTAMP '2025-12-02 06:00:00', 'Completed');
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (4, 7, 4, 4, 1, DATE '2025-12-02', TIMESTAMP '2025-12-02 06:00:00', TIMESTAMP '2025-12-02 14:00:00', 'Completed');
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (5, 42, 5, 5, 2, DATE '2025-12-02', TIMESTAMP '2025-12-02 14:00:00', TIMESTAMP '2025-12-02 22:00:00', 'Completed');
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (6, 43, 6, 6, 1, DATE '2025-12-03', TIMESTAMP '2025-12-03 06:00:00', TIMESTAMP '2025-12-03 14:00:00', 'Completed');
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (7, 44, 7, 7, 2, DATE '2025-12-03', TIMESTAMP '2025-12-03 14:00:00', TIMESTAMP '2025-12-03 22:00:00', 'Completed');
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (8, 45, 1, 8, 1, DATE '2025-12-04', TIMESTAMP '2025-12-04 06:00:00', TIMESTAMP '2025-12-04 14:00:00', 'Completed');
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (9, 46, 2, 9, 2, DATE '2025-12-04', TIMESTAMP '2025-12-04 14:00:00', TIMESTAMP '2025-12-04 22:00:00', 'Completed');
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (10, 47, 3, 10, 1, DATE '2025-12-05', TIMESTAMP '2025-12-05 06:00:00', TIMESTAMP '2025-12-05 14:00:00', 'Completed');
+
+-- Current assignments (December 7th)
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (11, 48, 4, 11, 1, DATE '2025-12-07', TIMESTAMP '2025-12-07 06:00:00', TIMESTAMP '2025-12-07 14:00:00', 'Completed');
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (12, 49, 5, 12, 1, DATE '2025-12-07', TIMESTAMP '2025-12-07 06:00:00', TIMESTAMP '2025-12-07 14:00:00', 'Completed');
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (13, 50, 6, 13, 2, DATE '2025-12-07', TIMESTAMP '2025-12-07 14:00:00', NULL, 'In-Progress');
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (14, 58, 7, 14, 2, DATE '2025-12-07', TIMESTAMP '2025-12-07 14:00:00', NULL, 'In-Progress');
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (15, 59, 9, 15, 3, DATE '2025-12-07', TIMESTAMP '2025-12-07 22:00:00', NULL, 'Scheduled');
+
+-- Future assignments
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (16, 60, 10, 1, 1, DATE '2025-12-08', TIMESTAMP '2025-12-08 06:00:00', NULL, 'Scheduled');
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (17, 61, 1, 2, 2, DATE '2025-12-08', TIMESTAMP '2025-12-08 14:00:00', NULL, 'Scheduled');
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (18, 62, 2, 3, 1, DATE '2025-12-09', TIMESTAMP '2025-12-09 06:00:00', NULL, 'Scheduled');
+
+-- Cancelled assignments
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (19, 63, 3, 4, 2, DATE '2025-12-06', TIMESTAMP '2025-12-06 14:00:00', NULL, 'Cancelled');
+INSERT INTO EQUIPMENT_ASSIGNMENT VALUES (20, 64, 4, 5, 3, DATE '2025-12-05', TIMESTAMP '2025-12-05 22:00:00', NULL, 'Cancelled');
+
+COMMIT;
+
+-- Preventive maintenance
+INSERT INTO MAINTENANCE_SCHEDULE VALUES (1, 1, 'Preventive', DATE '2025-12-08', 4.0, 'High', '250-hour service: oil change, filters, lubrication', 'Scheduled', 1);
+INSERT INTO MAINTENANCE_SCHEDULE VALUES (2, 5, 'Preventive', DATE '2025-12-09', 4.5, 'High', '250-hour service: oil change, filters, lubrication', 'Scheduled', 1);
+INSERT INTO MAINTENANCE_SCHEDULE VALUES (3, 6, 'Preventive', DATE '2025-12-10', 8.0, 'High', '500-hour service: comprehensive inspection, brake check', 'Scheduled', 2);
+INSERT INTO MAINTENANCE_SCHEDULE VALUES (4, 7, 'Preventive', DATE '2025-12-12', 8.5, 'High', '500-hour service: comprehensive inspection, brake check', 'Scheduled', 2);
+INSERT INTO MAINTENANCE_SCHEDULE VALUES (5, 42, 'Preventive', DATE '2025-12-15', 16.0, 'Critical', '1000-hour service: major overhaul, transmission check', 'Scheduled', 1);
+INSERT INTO MAINTENANCE_SCHEDULE VALUES (6, 43, 'Preventive', DATE '2025-12-18', 16.0, 'Critical', '1000-hour service: major overhaul, transmission check', 'Scheduled', 1);
+INSERT INTO MAINTENANCE_SCHEDULE VALUES (7, 44, 'Preventive', DATE '2025-12-20', 4.0, 'Medium', '250-hour service: routine maintenance', 'Scheduled', 3);
+
+-- Corrective maintenance
+INSERT INTO MAINTENANCE_SCHEDULE VALUES (8, 45, 'Corrective', DATE '2025-12-07', 6.0, 'High', 'Hydraulic leak repair', 'In-Progress', 3);
+INSERT INTO MAINTENANCE_SCHEDULE VALUES (9, 46, 'Corrective', DATE '2025-12-08', 4.0, 'Medium', 'Replace worn brake pads', 'Scheduled', 2);
+INSERT INTO MAINTENANCE_SCHEDULE VALUES (10, 47, 'Corrective', DATE '2025-12-09', 5.0, 'High', 'Electrical system troubleshooting', 'Scheduled', 1);
+INSERT INTO MAINTENANCE_SCHEDULE VALUES (11, 48, 'Corrective', DATE '2025-12-11', 3.0, 'Medium', 'Tire replacement', 'Scheduled', 2);
+
+-- Emergency maintenance
+INSERT INTO MAINTENANCE_SCHEDULE VALUES (12, 49, 'Emergency', DATE '2025-12-06', 12.0, 'Critical', 'Engine failure - complete rebuild required', 'Completed', 1);
+INSERT INTO MAINTENANCE_SCHEDULE VALUES (13, 50, 'Emergency', DATE '2025-12-07', 8.0, 'Critical', 'Transmission failure - immediate attention', 'In-Progress', 2);
+
+-- Predictive maintenance
+INSERT INTO MAINTENANCE_SCHEDULE VALUES (14, 58, 'Predictive', DATE '2025-12-13', 3.0, 'Medium', 'Vibration analysis indicated bearing wear', 'Scheduled', 3);
+INSERT INTO MAINTENANCE_SCHEDULE VALUES (15, 59, 'Predictive', DATE '2025-12-14', 3.5, 'Medium', 'Oil analysis showed contamination', 'Scheduled', 1);
+INSERT INTO MAINTENANCE_SCHEDULE VALUES (16, 60, 'Predictive', DATE '2025-12-16', 2.5, 'Low', 'Temperature monitoring shows anomaly', 'Scheduled', 2);
+
+-- Additional scheduled maintenance
+INSERT INTO MAINTENANCE_SCHEDULE VALUES (17, 61, 'Preventive', DATE '2025-12-22', 4.0, 'Medium', 'Routine inspection and lubrication', 'Scheduled', 3);
+INSERT INTO MAINTENANCE_SCHEDULE VALUES (18, 62, 'Preventive', DATE '2025-12-25', 6.0, 'High', 'Pre-holiday comprehensive check', 'Scheduled', 1);
+INSERT INTO MAINTENANCE_SCHEDULE VALUES (19, 63, 'Corrective', DATE '2025-12-10', 5.5, 'High', 'Cooling system repair', 'Scheduled', 2);
+INSERT INTO MAINTENANCE_SCHEDULE VALUES (20, 64, 'Preventive', DATE '2025-12-28', 4.0, 'Medium', 'End of month service', 'Scheduled', 3);
+
+COMMIT;
+
+INSERT INTO MAINTENANCE_HISTORY VALUES (
+    1, 12, 49, 
+    TIMESTAMP '2025-12-06 08:00:00',
+    TIMESTAMP '2025-12-06 20:00:00',
+    12.0, 15000.00,
+    'Engine oil (60L), Oil filter (2), Air filter (1), Fuel filter (1), Coolant (20L), Pistons (6), Bearings (12), Gasket kit',
+    'Complete engine rebuild. Replaced pistons, bearings, and gaskets. Engine tested successfully. All systems operational.',
+    1
+);
+
+INSERT INTO MAINTENANCE_HISTORY VALUES (
+    2, NULL, 1,
+    TIMESTAMP '2025-12-01 06:00:00',
+    TIMESTAMP '2025-12-01 10:00:00',
+    4.0, 850.00,
+    'Engine oil (40L), Oil filter (1), Air filter (1), Fuel filter (1)',
+    '250-hour service completed. All fluid levels checked and topped up. All systems normal.',
+    1
+);
+
+INSERT INTO MAINTENANCE_HISTORY VALUES (
+    3, NULL, 5,
+    TIMESTAMP '2025-11-28 14:00:00',
+    TIMESTAMP '2025-11-28 22:00:00',
+    8.0, 1200.00,
+    'Engine oil (45L), Oil filter (1), Air filter (1), Fuel filter (1), Hydraulic oil (30L), Brake pads (4 sets)',
+    '500-hour service. Brake system inspected and adjusted. Hydraulic system serviced.',
+    2
+);
+
+INSERT INTO MAINTENANCE_HISTORY VALUES (
+    4, NULL, 6,
+    TIMESTAMP '2025-11-25 06:00:00',
+    TIMESTAMP '2025-11-26 14:00:00',
+    16.0, 8500.00,
+    'Transmission oil (80L), Transmission filters (5), Seals kit, Bearings (4), Clutch plates (8)',
+    '1000-hour major service. Transmission overhauled. All wear parts replaced.',
+    1
+);
+
+INSERT INTO MAINTENANCE_HISTORY VALUES (
+    5, NULL, 7,
+    TIMESTAMP '2025-11-20 08:00:00',
+    TIMESTAMP '2025-11-20 12:00:00',
+    4.0, 750.00,
+    'Engine oil (40L), Oil filter (1), Air filter (1)',
+    'Routine oil change and inspection. No issues found.',
+    3
+);
+
+INSERT INTO MAINTENANCE_HISTORY VALUES (
+    6, NULL, 42,
+    TIMESTAMP '2025-11-15 10:00:00',
+    TIMESTAMP '2025-11-15 16:00:00',
+    6.0, 2400.00,
+    'Hydraulic hose (3m), Fittings (6), Hydraulic oil (15L), Seals (4)',
+    'Repaired hydraulic leak in boom cylinder. Replaced damaged hose and fittings.',
+    3
+);
+
+INSERT INTO MAINTENANCE_HISTORY VALUES (
+    7, NULL, 43,
+    TIMESTAMP '2025-11-10 06:00:00',
+    TIMESTAMP '2025-11-10 10:00:00',
+    4.0, 1800.00,
+    'Brake pads (4 sets), Brake fluid (5L), Brake rotors (2)',
+    'Replaced worn brake pads on all wheels. Brake fluid flushed and replaced.',
+    2
+);
+
+INSERT INTO MAINTENANCE_HISTORY VALUES (
+    8, NULL, 44,
+    TIMESTAMP '2025-11-05 14:00:00',
+    TIMESTAMP '2025-11-05 19:00:00',
+    5.0, 3200.00,
+    'Alternator, Wiring harness, Fuses (10), Battery terminals (2)',
+    'Electrical system fault. Replaced alternator and damaged wiring. System tested OK.',
+    1
+);
+
+INSERT INTO MAINTENANCE_HISTORY VALUES (
+    9, NULL, 45,
+    TIMESTAMP '2025-10-28 22:00:00',
+    TIMESTAMP '2025-10-30 06:00:00',
+    32.0, 25000.00,
+    'Transmission assembly, Torque converter, Seals kit, Transmission oil (100L), Gaskets',
+    'Emergency transmission replacement. Equipment was down for 2 days. New transmission installed and tested.',
+    2
+);
+
+INSERT INTO MAINTENANCE_HISTORY VALUES (
+    10, NULL, 46,
+    TIMESTAMP '2025-10-20 08:00:00',
+    TIMESTAMP '2025-10-21 16:00:00',
+    24.0, 18000.00,
+    'Tire (4), Wheel nuts (32), Valve stems (4)',
+    'Emergency tire replacement after blowout. All four tires replaced as precaution.',
+    1
+);
+
+INSERT INTO MAINTENANCE_HISTORY VALUES (
+    11, NULL, 47,
+    TIMESTAMP '2025-10-15 06:00:00',
+    TIMESTAMP '2025-10-15 10:00:00',
+    4.0, 950.00,
+    'Engine oil (42L), Oil filter (1), Air filter (1), Fuel filter (1)',
+    'Scheduled 250-hour service. All checks completed successfully.',
+    3
+);
+
+INSERT INTO MAINTENANCE_HISTORY VALUES (
+    12, NULL, 48,
+    TIMESTAMP '2025-10-10 14:00:00',
+    TIMESTAMP '2025-10-10 20:00:00',
+    6.0, 2100.00,
+    'Coolant (25L), Radiator hoses (2), Thermostat, Water pump seal',
+    'Cooling system overhaul. Replaced worn hoses and thermostat.',
+    2
+);
+
+INSERT INTO MAINTENANCE_HISTORY VALUES (
+    13, NULL, 50,
+    TIMESTAMP '2025-10-05 08:00:00',
+    TIMESTAMP '2025-10-05 16:00:00',
+    8.0, 3500.00,
+    'Hydraulic pump, Hydraulic oil (40L), Filters (3), Seals kit',
+    'Hydraulic pump replacement. System pressure tested and calibrated.',
+    1
+);
+
+INSERT INTO MAINTENANCE_HISTORY VALUES (
+    14, NULL, 58,
+    TIMESTAMP '2025-09-28 06:00:00',
+    TIMESTAMP '2025-09-28 12:00:00',
+    6.0, 1500.00,
+    'Starter motor, Battery (2), Battery cables, Terminal cleaner',
+    'Starting system repair. Replaced faulty starter motor and weak batteries.',
+    3
+);
+
+INSERT INTO MAINTENANCE_HISTORY VALUES (
+    15, NULL, 59,
+    TIMESTAMP '2025-09-20 14:00:00',
+    TIMESTAMP '2025-09-21 06:00:00',
+    16.0, 7800.00,
+    'Differential oil (50L), Bearings (6), Seals (8), Gaskets',
+    'Differential service. Replaced bearings and seals. Noise eliminated.',
+    2
+);
+
+COMMIT;
+
+INSERT INTO EQUIPMENT_USAGE_LOG VALUES (1, 1, 1, DATE '2025-12-01', 8.0, 320.50, 450.00, 15234.50, 1, 1);
+INSERT INTO EQUIPMENT_USAGE_LOG VALUES (2, 5, 2, DATE '2025-12-01', 8.0, 340.75, 480.00, 18567.25, 2, 2);
+INSERT INTO EQUIPMENT_USAGE_LOG VALUES (3, 6, 3, DATE '2025-12-01', 8.0, 310.25, 420.00, 12890.75, 3, 3);
+INSERT INTO EQUIPMENT_USAGE_LOG VALUES (4, 7, 4, DATE '2025-12-02', 8.0, 355.00, 495.50, 20145.00, 4, 4);
+INSERT INTO EQUIPMENT_USAGE_LOG VALUES (5, 42, 5, DATE '2025-12-02', 8.0, 330.50, 465.00, 16789.50, 5, 5);
+INSERT INTO EQUIPMENT_USAGE_LOG VALUES (6, 43, 6, DATE '2025-12-03', 8.0, 345.75, 475.25, 19234.75, 6, 6);
+INSERT INTO EQUIPMENT_USAGE_LOG VALUES (7, 44, 7, DATE '2025-12-03', 8.0, 325.00, 440.00, 14567.00, 7, 7);
+INSERT INTO EQUIPMENT_USAGE_LOG VALUES (8, 45, NULL, DATE '2025-12-04', 8.0, 360.25, 500.75, 21890.25, 1, 8);
+INSERT INTO EQUIPMENT_USAGE_LOG VALUES (9, 46, 9, DATE '2025-12-04', 8.0, 335.50, 470.00, 17456.50, 2, 9);
+INSERT INTO EQUIPMENT_USAGE_LOG VALUES (10, 47, 10, DATE '2025-12-05', 8.0, 350.00, 485.50, 19678.00, 3, 10);
+INSERT INTO EQUIPMENT_USAGE_LOG VALUES (11, 48, NULL, DATE '2025-12-05', 7.5, 300.00, 425.00, 15242.00, 4, 11);
+INSERT INTO EQUIPMENT_USAGE_LOG VALUES (12, 49, NULL, DATE '2025-12-05', 7.5, 315.50, 445.25, 18574.75, 5, 12);
+INSERT INTO EQUIPMENT_USAGE_LOG VALUES (13, 50, NULL, DATE '2025-12-06', 8.0, 320.75, 455.00, 12898.75, 6, 13);
+INSERT INTO EQUIPMENT_USAGE_LOG VALUES (14, 58, NULL, DATE '2025-12-06', 8.0, 340.00, 475.50, 20153.00, 7, 14);
+INSERT INTO EQUIPMENT_USAGE_LOG VALUES (15, 59, NULL, DATE '2025-12-06', 8.0, 330.25, 460.00, 16797.75, 9, 15);
+INSERT INTO EQUIPMENT_USAGE_LOG VALUES (16, 60, NULL, DATE '2025-12-07', 8.0, 325.50, 450.75, 15250.00, 10, 1);
+INSERT INTO EQUIPMENT_USAGE_LOG VALUES (17, 61, NULL, DATE '2025-12-07', 8.0, 345.00, 485.00, 18582.75, 1, 2);
+INSERT INTO EQUIPMENT_USAGE_LOG VALUES (18, 62, NULL, DATE '2025-12-07', 6.5, 260.00, 365.00, 12905.25, 2, 3);
+INSERT INTO EQUIPMENT_USAGE_LOG VALUES (19, 63, 19, DATE '2025-12-07', 6.5, 275.50, 390.25, 20159.50, 3, 4);
+INSERT INTO EQUIPMENT_USAGE_LOG VALUES (20, 64, 20, DATE '2025-12-07', 7.0, 290.00, 410.00, 16804.75, 4, 5);
+
+COMMIT;
+
+-- ============================================================================
+-- TABLE 12: DOWNTIME_RECORDS
+-- ============================================================================
+CREATE TABLE DOWNTIME_RECORDS (
+    DOWNTIME_ID NUMBER(10) CONSTRAINT pk_downtime PRIMARY KEY,
+    EQUIPMENT_ID NUMBER(10) CONSTRAINT nn_down_equip_id NOT NULL,
+    START_TIME TIMESTAMP CONSTRAINT nn_down_start NOT NULL,
+    END_TIME TIMESTAMP,
+    DURATION_HOURS NUMBER(8,2),
+    DOWNTIME_TYPE VARCHAR2(50) CONSTRAINT nn_down_type NOT NULL,
+    REASON VARCHAR2(500),
+    IMPACT_COST NUMBER(12,2),
+    REPORTED_BY NUMBER(10),
+    CONSTRAINT fk_down_equip FOREIGN KEY (EQUIPMENT_ID) REFERENCES EQUIPMENT(EQUIPMENT_ID),
+    CONSTRAINT fk_down_reporter FOREIGN KEY (REPORTED_BY) REFERENCES OPERATORS(OPERATOR_ID),
+    CONSTRAINT chk_down_type CHECK (DOWNTIME_TYPE IN ('Breakdown', 'Maintenance', 'Weather', 'No-Operator', 'Other')),
+    CONSTRAINT chk_down_times CHECK (END_TIME IS NULL OR END_TIME > START_TIME),
+    CONSTRAINT chk_down_cost CHECK (IMPACT_COST IS NULL OR IMPACT_COST >= 0)
+) TABLESPACE mining_data;
+
+COMMENT ON TABLE DOWNTIME_RECORDS IS 'Equipment downtime tracking and analysis';
+
+-- Check if table has data
+SELECT COUNT(*) AS EXISTING_RECORDS FROM DOWNTIME_RECORDS;
+
+-- View existing data (if any)
+SELECT * FROM DOWNTIME_RECORDS ORDER BY DOWNTIME_ID;
+
+-- Check table structure
+DESC DOWNTIME_RECORDS;
+
+INSERT INTO DOWNTIME_RECORDS VALUES (
+    1, 49, 
+    TIMESTAMP '2025-12-06 08:00:00',
+    TIMESTAMP '2025-12-06 20:00:00',
+    12.0,
+    'Breakdown',
+    'Engine failure - complete rebuild required',
+    15000.00,
+    1
+);
+
+INSERT INTO DOWNTIME_RECORDS VALUES (
+    2, 45,
+    TIMESTAMP '2025-10-28 22:00:00',
+    TIMESTAMP '2025-10-30 06:00:00',
+    32.0,
+    'Breakdown',
+    'Transmission failure - emergency replacement',
+    25000.00,
+    2
+);
+
+INSERT INTO DOWNTIME_RECORDS VALUES (
+    3, 46,
+    TIMESTAMP '2025-10-20 08:00:00',
+    TIMESTAMP '2025-10-21 16:00:00',
+    24.0,
+    'Breakdown',
+    'Tire blowout - all tires replaced',
+    18000.00,
+    1
+);
+
+INSERT INTO DOWNTIME_RECORDS VALUES (
+    4, 44,
+    TIMESTAMP '2025-11-05 14:00:00',
+    TIMESTAMP '2025-11-05 19:00:00',
+    5.0,
+    'Breakdown',
+    'Electrical system failure - alternator replacement',
+    3200.00,
+    3
+);
+
+-- Maintenance downtime (scheduled)
+INSERT INTO DOWNTIME_RECORDS VALUES (
+    5, 6,
+    TIMESTAMP '2025-11-25 06:00:00',
+    TIMESTAMP '2025-11-26 14:00:00',
+    16.0,
+    'Maintenance',
+    '1000-hour major service - transmission overhaul',
+    8500.00,
+    1
+);
+
+INSERT INTO DOWNTIME_RECORDS VALUES (
+    6, 5,
+    TIMESTAMP '2025-11-28 14:00:00',
+    TIMESTAMP '2025-11-28 22:00:00',
+    8.0,
+    'Maintenance',
+    '500-hour service - brake system and hydraulics',
+    1200.00,
+    2
+);
+
+INSERT INTO DOWNTIME_RECORDS VALUES (
+    7, 48,
+    TIMESTAMP '2025-10-10 14:00:00',
+    TIMESTAMP '2025-10-10 20:00:00',
+    6.0,
+    'Maintenance',
+    'Cooling system overhaul',
+    2100.00,
+    2
+);
+
+INSERT INTO DOWNTIME_RECORDS VALUES (
+    8, 42,
+    TIMESTAMP '2025-11-15 10:00:00',
+    TIMESTAMP '2025-11-15 16:00:00',
+    6.0,
+    'Maintenance',
+    'Hydraulic leak repair',
+    2400.00,
+    3
+);
+
+-- Weather-related downtime
+INSERT INTO DOWNTIME_RECORDS VALUES (
+    9, 1,
+    TIMESTAMP '2025-11-18 06:00:00',
+    TIMESTAMP '2025-11-18 18:00:00',
+    12.0,
+    'Weather',
+    'Heavy rain - site flooded, operations suspended',
+    8000.00,
+    1
+);
+
+INSERT INTO DOWNTIME_RECORDS VALUES (
+    10, 7,
+    TIMESTAMP '2025-11-22 14:00:00',
+    TIMESTAMP '2025-11-23 06:00:00',
+    16.0,
+    'Weather',
+    'Severe thunderstorm - safety shutdown',
+    10500.00,
+    4
+);
+
+-- No-Operator downtime
+INSERT INTO DOWNTIME_RECORDS VALUES (
+    11, 58,
+    TIMESTAMP '2025-11-30 06:00:00',
+    TIMESTAMP '2025-11-30 14:00:00',
+    8.0,
+    'No-Operator',
+    'Operator called in sick - no replacement available',
+    5000.00,
+    NULL
+);
+
+INSERT INTO DOWNTIME_RECORDS VALUES (
+    12, 60,
+    TIMESTAMP '2025-12-03 22:00:00',
+    TIMESTAMP '2025-12-04 06:00:00',
+    8.0,
+    'No-Operator',
+    'Operator training session - equipment idle',
+    4500.00,
+    NULL
+);
+
+-- Current/ongoing downtime
+INSERT INTO DOWNTIME_RECORDS VALUES (
+    13, 50,
+    TIMESTAMP '2025-12-07 14:00:00',
+    NULL,
+    NULL,
+    'Breakdown',
+    'Transmission failure - repair in progress',
+    NULL,
+    7
+);
+
+INSERT INTO DOWNTIME_RECORDS VALUES (
+    14, 45,
+    TIMESTAMP '2025-12-07 10:00:00',
+    NULL,
+    NULL,
+    'Maintenance',
+    'Hydraulic leak repair in progress',
+    NULL,
+    3
+);
+
+-- Other downtime
+INSERT INTO DOWNTIME_RECORDS VALUES (
+    15, 62,
+    TIMESTAMP '2025-12-02 08:00:00',
+    TIMESTAMP '2025-12-02 12:00:00',
+    4.0,
+    'Other',
+    'Fuel delivery delayed - equipment waiting',
+    2800.00,
+    5
+);
+
+COMMIT;
+
+-- Engine Parts (8 records)
+INSERT INTO SPARE_PARTS_INVENTORY VALUES (
+    1, 'ENG-OIL-001', 'Engine Oil 15W-40 (20L)', 'Engine', 
+    45, 30, 185.00, 'Shell Lubricants', DATE '2025-11-15'
+);
+
+INSERT INTO SPARE_PARTS_INVENTORY VALUES (
+    2, 'ENG-FILT-002', 'Oil Filter - Heavy Duty', 'Engine', 
+    28, 20, 45.50, 'Caterpillar Parts', DATE '2025-11-20'
+);
+
+INSERT INTO SPARE_PARTS_INVENTORY VALUES (
+    3, 'ENG-FILT-003', 'Air Filter Element', 'Engine', 
+    35, 25, 78.00, 'Donaldson Filters', DATE '2025-11-18'
+);
+
+INSERT INTO SPARE_PARTS_INVENTORY VALUES (
+    4, 'ENG-FILT-004', 'Fuel Filter Assembly', 'Engine', 
+    22, 15, 92.50, 'Caterpillar Parts', DATE '2025-11-25'
+);
+
+INSERT INTO SPARE_PARTS_INVENTORY VALUES (
+    5, 'ENG-COOL-005', 'Coolant Concentrate (20L)', 'Engine', 
+    18, 20, 165.00, 'Valvoline', DATE '2025-10-30'
+);
+
+INSERT INTO SPARE_PARTS_INVENTORY VALUES (
+    6, 'ENG-BELT-006', 'Serpentine Belt', 'Engine', 
+    12, 10, 125.00, 'Gates Corporation', DATE '2025-11-10'
+);
+
+INSERT INTO SPARE_PARTS_INVENTORY VALUES (
+    7, 'ENG-PUMP-007', 'Water Pump Assembly', 'Engine', 
+    5, 8, 850.00, 'Caterpillar Parts', DATE '2025-09-15'
+);
+
+INSERT INTO SPARE_PARTS_INVENTORY VALUES (
+    8, 'ENG-GASK-008', 'Head Gasket Kit', 'Engine', 
+    8, 5, 425.00, 'Victor Reinz', DATE '2025-11-05'
+);
+
+-- Hydraulic Parts (7 records)
+INSERT INTO SPARE_PARTS_INVENTORY VALUES (
+    9, 'HYD-OIL-009', 'Hydraulic Oil AW-68 (20L)', 'Hydraulic', 
+    52, 40, 195.00, 'Mobil Industrial', DATE '2025-11-22'
+);
+
+INSERT INTO SPARE_PARTS_INVENTORY VALUES (
+    10, 'HYD-FILT-010', 'Hydraulic Filter Cartridge', 'Hydraulic', 
+    30, 25, 68.00, 'Parker Hannifin', DATE '2025-11-12'
+);
+
+INSERT INTO SPARE_PARTS_INVENTORY VALUES (
+    11, 'HYD-HOSE-011', 'Hydraulic Hose 1/2" (per meter)', 'Hydraulic', 
+    85, 50, 22.50, 'Gates Hydraulics', DATE '2025-11-28'
+);
+
+INSERT INTO SPARE_PARTS_INVENTORY VALUES (
+    12, 'HYD-SEAL-012', 'Cylinder Seal Kit', 'Hydraulic', 
+    15, 12, 145.00, 'Parker Hannifin', DATE '2025-11-08'
+);
+
+INSERT INTO SPARE_PARTS_INVENTORY VALUES (
+    13, 'HYD-PUMP-013', 'Hydraulic Pump Assembly', 'Hydraulic', 
+    3, 5, 3500.00, 'Rexroth Bosch', DATE '2025-08-20'
+);
+
+INSERT INTO SPARE_PARTS_INVENTORY VALUES (
+    14, 'HYD-VALV-014', 'Control Valve Block', 'Hydraulic', 
+    6, 4, 1850.00, 'Parker Hannifin', DATE '2025-10-15'
+);
+
+INSERT INTO SPARE_PARTS_INVENTORY VALUES (
+    15, 'HYD-FITT-015', 'Hydraulic Fittings Assortment', 'Hydraulic', 
+    42, 30, 12.50, 'Gates Hydraulics', DATE '2025-11-25'
+);
+
+-- Electrical Parts (5 records)
+INSERT INTO SPARE_PARTS_INVENTORY VALUES (
+    16, 'ELEC-BATT-016', 'Heavy Duty Battery 12V 200Ah', 'Electrical', 
+    14, 10, 385.00, 'Exide Technologies', DATE '2025-11-01'
+);
+
+INSERT INTO SPARE_PARTS_INVENTORY VALUES (
+    17, 'ELEC-ALT-017', 'Alternator 24V 150A', 'Electrical', 
+    4, 6, 1250.00, 'Delco Remy', DATE '2025-09-10'
+);
+
+INSERT INTO SPARE_PARTS_INVENTORY VALUES (
+    18, 'ELEC-START-018', 'Starter Motor 24V', 'Electrical', 
+    5, 5, 980.00, 'Bosch Automotive', DATE '2025-10-25'
+);
+
+INSERT INTO SPARE_PARTS_INVENTORY VALUES (
+    19, 'ELEC-WIRE-019', 'Wiring Harness Kit', 'Electrical', 
+    8, 6, 425.00, 'Caterpillar Parts', DATE '2025-11-15'
+);
+
+INSERT INTO SPARE_PARTS_INVENTORY VALUES (
+    20, 'ELEC-FUSE-020', 'Fuse Assortment Kit', 'Electrical', 
+    25, 15, 45.00, 'Littelfuse', DATE '2025-11-20'
+);
+
+-- Brake System (4 records)
+INSERT INTO SPARE_PARTS_INVENTORY VALUES (
+    21, 'BRK-PAD-021', 'Brake Pad Set (4 pads)', 'Brake', 
+    18, 16, 425.00, 'Brembo', DATE '2025-11-10'
+);
+
+INSERT INTO SPARE_PARTS_INVENTORY VALUES (
+    22, 'BRK-DISC-022', 'Brake Disc/Rotor', 'Brake', 
+    10, 8, 685.00, 'Brembo', DATE '2025-10-18'
+);
+
+INSERT INTO SPARE_PARTS_INVENTORY VALUES (
+    23, 'BRK-FLUID-023', 'Brake Fluid DOT 4 (5L)', 'Brake', 
+    32, 20, 55.00, 'Castrol', DATE '2025-11-22'
+);
+
+INSERT INTO SPARE_PARTS_INVENTORY VALUES (
+    24, 'BRK-CALI-024', 'Brake Caliper Assembly', 'Brake', 
+    6, 4, 1150.00, 'Caterpillar Parts', DATE '2025-09-28'
+);
+
+-- Tires & Wheels (3 records)
+INSERT INTO SPARE_PARTS_INVENTORY VALUES (
+    25, 'TIRE-HD-025', 'Heavy Duty Tire 29.5R25', 'Tires', 
+    8, 12, 4500.00, 'Michelin', DATE '2025-10-05'
+);
+
+INSERT INTO SPARE_PARTS_INVENTORY VALUES (
+    26, 'TIRE-STD-026', 'Standard Tire 20.5R25', 'Tires', 
+    6, 8, 2800.00, 'Bridgestone', DATE '2025-09-20'
+);
+
+INSERT INTO SPARE_PARTS_INVENTORY VALUES (
+    27, 'TIRE-VALVE-027', 'Tire Valve Stem', 'Tires', 
+    45, 30, 18.50, 'Schrader', DATE '2025-11-18'
+);
+
+-- Transmission Parts (3 records)
+INSERT INTO SPARE_PARTS_INVENTORY VALUES (
+    28, 'TRANS-OIL-028', 'Transmission Oil SAE 50 (20L)', 'Transmission', 
+    24, 20, 225.00, 'Mobil Delvac', DATE '2025-11-12'
+);
+
+INSERT INTO SPARE_PARTS_INVENTORY VALUES (
+    29, 'TRANS-FILT-029', 'Transmission Filter Kit', 'Transmission', 
+    15, 12, 185.00, 'Caterpillar Parts', DATE '2025-11-08'
+);
+
+INSERT INTO SPARE_PARTS_INVENTORY VALUES (
+    30, 'TRANS-SEAL-030', 'Transmission Seal Kit', 'Transmission', 
+    10, 8, 295.00, 'SKF Seals', DATE '2025-10-22'
+);
+
+COMMIT;
+
+-- Recent fuel records (December 2025)
+INSERT INTO FUEL_CONSUMPTION VALUES (
+    1, 1, TIMESTAMP '2025-12-07 06:30:00', 450.00, 1.45, 652.50, 15234.50, 1
+);
+
+INSERT INTO FUEL_CONSUMPTION VALUES (
+    2, 5, TIMESTAMP '2025-12-07 07:00:00', 480.00, 1.45, 696.00, 18567.25, 2
+);
+
+INSERT INTO FUEL_CONSUMPTION VALUES (
+    3, 6, TIMESTAMP '2025-12-07 06:45:00', 420.00, 1.45, 609.00, 12890.75, 3
+);
+
+INSERT INTO FUEL_CONSUMPTION VALUES (
+    4, 7, TIMESTAMP '2025-12-06 06:30:00', 495.50, 1.45, 718.48, 20145.00, 4
+);
+
+INSERT INTO FUEL_CONSUMPTION VALUES (
+    5, 42, TIMESTAMP '2025-12-06 07:15:00', 465.00, 1.45, 674.25, 16789.50, 5
+);
+
+INSERT INTO FUEL_CONSUMPTION VALUES (
+    6, 43, TIMESTAMP '2025-12-05 06:20:00', 475.25, 1.45, 689.11, 19234.75, 6
+);
+
+INSERT INTO FUEL_CONSUMPTION VALUES (
+    7, 44, TIMESTAMP '2025-12-05 07:00:00', 440.00, 1.45, 638.00, 14567.00, 7
+);
+
+INSERT INTO FUEL_CONSUMPTION VALUES (
+    8, 46, TIMESTAMP '2025-12-04 06:45:00', 470.00, 1.45, 681.50, 17456.50, 2
+);
+
+INSERT INTO FUEL_CONSUMPTION VALUES (
+    9, 47, TIMESTAMP '2025-12-04 06:30:00', 485.50, 1.45, 703.98, 19678.00, 3
+);
+
+INSERT INTO FUEL_CONSUMPTION VALUES (
+    10, 48, TIMESTAMP '2025-12-03 06:50:00', 425.00, 1.45, 616.25, 15242.00, 4
+);
+
+-- Earlier December records
+INSERT INTO FUEL_CONSUMPTION VALUES (
+    11, 58, TIMESTAMP '2025-12-02 07:10:00', 455.00, 1.45, 659.75, 20153.00, 7
+);
+
+INSERT INTO FUEL_CONSUMPTION VALUES (
+    12, 59, TIMESTAMP '2025-12-02 06:40:00', 460.00, 1.45, 667.00, 16797.75, 9
+);
+
+INSERT INTO FUEL_CONSUMPTION VALUES (
+    13, 60, TIMESTAMP '2025-12-01 06:55:00', 450.75, 1.45, 653.59, 15250.00, 10
+);
+
+INSERT INTO FUEL_CONSUMPTION VALUES (
+    14, 61, TIMESTAMP '2025-12-01 07:20:00', 485.00, 1.45, 703.25, 18582.75, 1
+);
+
+INSERT INTO FUEL_CONSUMPTION VALUES (
+    15, 62, TIMESTAMP '2025-11-30 06:30:00', 365.00, 1.42, 518.30, 12905.25, 2
+);
+
+-- November records
+INSERT INTO FUEL_CONSUMPTION VALUES (
+    16, 63, TIMESTAMP '2025-11-29 07:00:00', 390.25, 1.42, 554.16, 20159.50, 3
+);
+
+INSERT INTO FUEL_CONSUMPTION VALUES (
+    17, 64, TIMESTAMP '2025-11-28 06:45:00', 410.00, 1.42, 582.20, 16804.75, 4
+);
+
+INSERT INTO FUEL_CONSUMPTION VALUES (
+    18, 1, TIMESTAMP '2025-11-27 06:30:00', 445.00, 1.42, 631.90, 14784.50, 5
+);
+
+INSERT INTO FUEL_CONSUMPTION VALUES (
+    19, 5, TIMESTAMP '2025-11-26 07:15:00', 475.00, 1.42, 674.50, 18087.25, 6
+);
+
+INSERT INTO FUEL_CONSUMPTION VALUES (
+    20, 6, TIMESTAMP '2025-11-25 06:50:00', 415.00, 1.42, 589.30, 12470.75, 7
+);
+
+INSERT INTO FUEL_CONSUMPTION VALUES (
+    21, 7, TIMESTAMP '2025-11-24 07:00:00', 490.00, 1.42, 695.80, 19649.50, 1
+);
+
+INSERT INTO FUEL_CONSUMPTION VALUES (
+    22, 42, TIMESTAMP '2025-11-23 06:40:00', 460.00, 1.42, 653.20, 16324.50, 2
+);
+
+INSERT INTO FUEL_CONSUMPTION VALUES (
+    23, 43, TIMESTAMP '2025-11-22 06:55:00', 470.00, 1.42, 667.40, 18759.75, 3
+);
+
+INSERT INTO FUEL_CONSUMPTION VALUES (
+    24, 44, TIMESTAMP '2025-11-21 07:10:00', 435.00, 1.42, 617.70, 14127.00, 4
+);
+
+INSERT INTO FUEL_CONSUMPTION VALUES (
+    25, 46, TIMESTAMP '2025-11-20 06:30:00', 465.00, 1.42, 660.30, 16986.50, 5
+);
+
+COMMIT;
+
+-- December 7, 2025 - Today's operations
+INSERT INTO AUDIT_LOG VALUES (
+    1, 'EQUIPMENT', 'INSERT', 
+    TIMESTAMP '2025-12-07 08:15:23', 
+    'ADMIN_USER', 'ALLOWED', 
+    'New excavator added to fleet', 
+    '192.168.1.100'
+);
+
+INSERT INTO AUDIT_LOG VALUES (
+    2, 'EQUIPMENT_ASSIGNMENT', 'INSERT', 
+    TIMESTAMP '2025-12-07 06:30:45', 
+    'OPS_MANAGER', 'ALLOWED', 
+    'Morning shift equipment assignment', 
+    '192.168.1.105'
+);
+
+INSERT INTO AUDIT_LOG VALUES (
+    3, 'DOWNTIME_RECORDS', 'INSERT', 
+    TIMESTAMP '2025-12-07 10:15:00', 
+    'MAINT_SUPERVISOR', 'ALLOWED', 
+    'Equipment breakdown reported', 
+    '192.168.1.110'
+);
+
+INSERT INTO AUDIT_LOG VALUES (
+    4, 'FUEL_CONSUMPTION', 'INSERT', 
+    TIMESTAMP '2025-12-07 06:45:12', 
+    'FUEL_ATTENDANT', 'ALLOWED', 
+    'Morning fuel refill recorded', 
+    '192.168.1.115'
+);
+
+INSERT INTO AUDIT_LOG VALUES (
+    5, 'OPERATORS', 'UPDATE', 
+    TIMESTAMP '2025-12-07 09:20:15', 
+    'HR_ADMIN', 'ALLOWED', 
+    'Operator certification updated', 
+    '192.168.1.120'
+);
+
+-- December 6, 2025
+INSERT INTO AUDIT_LOG VALUES (
+    6, 'MAINTENANCE_HISTORY', 'INSERT', 
+    TIMESTAMP '2025-12-06 16:30:00', 
+    'MAINT_SUPERVISOR', 'ALLOWED', 
+    'Maintenance completion recorded', 
+    '192.168.1.110'
+);
+
+INSERT INTO AUDIT_LOG VALUES (
+    7, 'SPARE_PARTS_INVENTORY', 'UPDATE', 
+    TIMESTAMP '2025-12-06 11:45:30', 
+    'WAREHOUSE_MGR', 'ALLOWED', 
+    'Stock level updated after usage', 
+    '192.168.1.125'
+);
+
+INSERT INTO AUDIT_LOG VALUES (
+    8, 'EQUIPMENT', 'DELETE', 
+    TIMESTAMP '2025-12-06 13:00:00', 
+    'GUEST_USER', 'DENIED', 
+    'Unauthorized deletion attempt', 
+    '192.168.1.200'
+);
+
+-- December 5, 2025
+INSERT INTO AUDIT_LOG VALUES (
+    9, 'PROJECTS', 'UPDATE', 
+    TIMESTAMP '2025-12-05 10:00:00', 
+    'PROJECT_MGR', 'ALLOWED', 
+    'Project progress updated', 
+    '192.168.1.130'
+);
+
+INSERT INTO AUDIT_LOG VALUES (
+    10, 'EQUIPMENT_USAGE_LOG', 'INSERT', 
+    TIMESTAMP '2025-12-05 15:00:00', 
+    'OPS_MANAGER', 'ALLOWED', 
+    'Daily usage recorded', 
+    '192.168.1.105'
+);
+
+-- December 4, 2025
+INSERT INTO AUDIT_LOG VALUES (
+    11, 'EQUIPMENT', 'UPDATE', 
+    TIMESTAMP '2025-12-04 11:15:00', 
+    'ADMIN_USER', 'ALLOWED', 
+    'Equipment status changed to maintenance', 
+    '192.168.1.100'
+);
+
+INSERT INTO AUDIT_LOG VALUES (
+    12, 'MAINTENANCE_SCHEDULE', 'INSERT', 
+    TIMESTAMP '2025-12-04 09:00:00', 
+    'MAINT_SUPERVISOR', 'ALLOWED', 
+    'New maintenance scheduled', 
+    '192.168.1.110'
+);
+
+-- December 3, 2025
+INSERT INTO AUDIT_LOG VALUES (
+    13, 'FUEL_RECORDS', 'DELETE', 
+    TIMESTAMP '2025-12-03 14:30:00', 
+    'TEMP_USER', 'DENIED', 
+    'Unauthorized deletion attempt', 
+    '192.168.1.210'
+);
+
+INSERT INTO AUDIT_LOG VALUES (
+    14, 'DOWNTIME_RECORDS', 'UPDATE', 
+    TIMESTAMP '2025-12-03 20:00:00', 
+    'MAINT_SUPERVISOR', 'ALLOWED', 
+    'Downtime record closed after repair', 
+    '192.168.1.110'
+);
+
+INSERT INTO AUDIT_LOG VALUES (
+    15, 'SPARE_PARTS_INVENTORY', 'INSERT', 
+    TIMESTAMP '2025-12-03 08:45:00', 
+    'WAREHOUSE_MGR', 'ALLOWED', 
+    'New parts received from supplier', 
+    '192.168.1.125'
+);
+
+COMMIT;

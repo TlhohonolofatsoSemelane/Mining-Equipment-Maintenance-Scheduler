@@ -1,504 +1,446 @@
-You're absolutely right! Let me add **clear screenshot placement instructions** throughout the README:
+# Mining Equipment Maintenance Scheduler
 
-```markdown
-# Mining Equipment Maintenance Scheduler Database System
-
-![Oracle](https://img.shields.io/badge/Database-Oracle%2019c-red)
+![Oracle](https://img.shields.io/badge/Database-Oracle%2021c-red)
 ![Language](https://img.shields.io/badge/Language-PL%2FSQL-orange)
-![Institution](https://img.shields.io/badge/Institution-[Your%20University]-blue)
-![Course](https://img.shields.io/badge/Course-Database%20Systems-green)
+![Institution](https://img.shields.io/badge/Institution-AUCA-blue)
+![Course](https://img.shields.io/badge/Course-INSY%208311-green)
 
 > **Capstone Project | Database Development with PL/SQL**  
-> *[Adventist University of Central Africa]*
+> *Adventist University of Central Africa (AUCA)*
 
 ---
 
 ## 👤 Author Information
 
-| Field | Detail |
-|:---|:---|
-| **Student Name** | **Tlhohonolofatso Temana Semelane** |
-| **Student ID** | **27293** | |
-| **Lecturer** | Eric Maniraguha |
+| Field           | Detail                                             |
+|:----------------|:---------------------------------------------------|
+| **Student Name**| **Tlhohonolofatso Temana Semane**                  |
+| **Student ID**  | **27293**                                          |
+| **Group**       | Monday (A)                                         |
+| **Lecturer**    | Eric Maniraguha                                    |
+| **Database PDB**| `Mon_27293_Semelane_MiningScheduler_db`             |
 
 ---
 
 ## 📑 Table of Contents
-1. [Project Overview](#-project-overview)
-2. [Key Objectives](#-key-objectives)
-3. [System Architecture](#-system-architecture)
-4. [Technical Stack](#-technical-stack)
-5. [Security Features](#-security-features)
-6. [Folder Structure](#-folder-structure)
-7. [Documentation & BI](#-documentation--bi)
-8. [Screenshots](#-screenshots)
-9. [Quick Start Guide](#-quick-start-guide)
+1. [Project Overview](#-project-overview)  
+2. [Key Objectives](#-key-objectives)  
+3. [System Architecture](#-system-architecture)  
+4. [Technical Stack](#-technical-stack)  
+5. [Reliability & Safety Features](#-reliability--safety-features)  
+6. [Folder Structure](#-folder-structure)  
+7. [Documentation & BI](#-documentation--bi)  
+8. [Screenshots](#-screenshots)  
+9. [Quick Start Guide](#-quick-start-guide)  
 
 ---
 
 ## 📖 Project Overview
 
 ### 🚩 Problem Statement
-Mining operations face significant challenges in managing equipment maintenance schedules, tracking equipment downtime, and ensuring timely servicing to prevent costly breakdowns. Currently, there is **no centralized system** to monitor maintenance history, predict equipment failures, or optimize technician assignments. Manual maintenance tracking leads to missed service intervals, unplanned equipment failures costing thousands per hour in lost productivity, and inefficient resource allocation without visibility into parts inventory or technician workload.
+Large mining operations rely heavily on mobile equipment (trucks, excavators, loaders, drills) that must be **available, reliable, and safe**. In many sites, equipment assignments and maintenance activities are still managed with spreadsheets and manual logs. This leads to inconsistent data, double-booked machines, missed preventive maintenance, and poor visibility of downtime and maintenance costs.
+
+The absence of an integrated database makes it difficult to answer key questions like:  
+**Which equipment is assigned where today?**  
+**Which work orders are overdue?**  
+**Why is availability dropping for a specific truck or site?**
 
 ### 💡 Proposed Solution
-This project implements a comprehensive **PL/SQL Oracle Database System** that automates maintenance scheduling, tracks equipment health, and optimizes maintenance operations for improved equipment reliability and operational efficiency.
+This project implements an **Oracle PL/SQL–based Maintenance Scheduler Database** that centralises all operational and maintenance data for mining equipment. It supports:
 
-The system features:
-- **Automated Maintenance Scheduling:** Intelligent scheduling based on equipment usage hours, manufacturer recommendations, and historical maintenance patterns
-- **Real-Time Equipment Tracking:** Monitor equipment status, location, and operational health across multiple mine sites
-- **Predictive Maintenance Analytics:** Window functions and trend analysis to identify equipment at risk of failure before breakdowns occur
-- **Parts Inventory Management:** Automated reorder alerts when spare parts fall below minimum thresholds
-- **Technician Workload Optimization:** Smart assignment algorithms considering specialization, certification, and current workload
-- **Comprehensive Audit Trail:** Immutable logging of all maintenance activities, parts usage, and equipment modifications
-- **Cost Analysis Dashboard:** BI analytics tracking maintenance costs, downtime impact, and ROI on preventive maintenance
+- Daily **equipment assignments** to sites, shifts, and operators  
+- **Preventive and corrective maintenance** planning via schedules and work orders  
+- Logging of **usage, downtime, and fuel consumption**  
+- **Audit logging** of changes to critical tables for accountability  
+- BI-ready structures to measure **utilisation, availability, downtime, and maintenance cost**
 
 ---
 
 ## 🎯 Key Objectives
 
-* **Preventive Maintenance Automation:** Schedule routine maintenance based on equipment hours, calendar intervals, and manufacturer specifications
-* **Downtime Minimization:** Reduce unplanned equipment failures through predictive analytics and proactive servicing
-* **Resource Optimization:** Efficiently allocate technicians and spare parts to maximize equipment availability
-* **Comprehensive History Tracking:** Maintain complete maintenance records for warranty compliance and equipment valuation
-* **Cost Control:** Monitor and analyze maintenance expenditures to identify cost-saving opportunities
-* **Regulatory Compliance:** Ensure all equipment meets safety inspection requirements and certification standards
+- **Centralised Equipment Register:** Maintain a single source of truth for all mining equipment, including type, status, and owning department.
+- **Assignment Management:** Plan and record daily equipment assignments by site, shift, and primary operator.
+- **Maintenance Lifecycle Control:** Manage preventive schedules, work orders, and completed maintenance history.
+- **Operational Metrics Tracking:** Capture equipment usage, downtime, and fuel consumption for performance analysis.
+- **Auditability & Governance:** Log key data changes and support compliance with maintenance and safety standards.
+- **BI-Ready Data Model:** Enable analytics for utilisation, availability, MTBF, and maintenance cost per unit of production.
 
 ---
 
 ## 🏗 System Architecture
 
-The database is built on a **3NF Normalized Schema** implementing **Equipment-Centric Maintenance Management**. This design reflects real-world mining operations where equipment reliability directly impacts production targets.
+The database follows a **3NF normalised schema** and models a realistic mining maintenance environment where equipment is assigned to sites and maintained via structured work orders.
 
-### Core Tables (8 entities)
-1. **EQUIPMENT** — Mining equipment registry with specifications, purchase dates, and current status
-2. **MAINTENANCE_SCHEDULE** — Planned maintenance tasks with frequency, priority, and estimated duration
-3. **WORK_ORDERS** — Active and historical maintenance work orders with technician assignments
-4. **TECHNICIANS** — Maintenance staff with specializations, certifications, and availability
-5. **PARTS_INVENTORY** — Spare parts catalog with stock levels, costs, and supplier information
-6. **MAINTENANCE_HISTORY** — Complete audit trail of all maintenance activities performed
-7. **EQUIPMENT_DOWNTIME** — Detailed tracking of equipment unavailability with cost impact analysis
-8. **AUDIT_LOG** — System-wide change tracking for compliance and security
+### Core Tables (Sample Entities)
+1. **EQUIPMENT** — Master data for trucks, excavators, loaders, drills, etc.
+2. **MINING_SITES** — Pits, plants, stockpiles, and workshops where equipment operates.
+3. **OPERATORS / MAINTENANCE_CREW / SUPERVISORS** — People who operate, service, or manage equipment.
+4. **EQUIPMENT_ASSIGNMENT** — Daily allocation of equipment to site, shift, and operator.
+5. **MAINTENANCE_SCHEDULE / WORK_ORDERS / MAINTENANCE_HISTORY** — Preventive plans, work orders, and completed maintenance.
+6. **EQUIPMENT_USAGE_LOG / DOWNTIME_RECORDS / FUEL_CONSUMPTION** — Usage, breakdowns, and fuel metrics.
+7. **AUDIT_LOG** — Generic audit trail for key DML operations.
 
-### 📸 **SCREENSHOT 1: Entity-Relationship Diagram**
-**Location:** `screenshots/database_objects/ERD_Diagram.png`
-
-![ER Diagram](./<img width="2748" height="1858" alt="ERD_Diagram" src="https://github.com/user-attachments/assets/649fd445-e836-4983-b3d6-77d08d7a5773" />
-)
-
-## ⚙️ Technical Stack
-
-| Component | Technology |
-|:---|:---|
-| **Database** | Oracle Database 21c (with PDB Architecture) |
-| **Language** | PL/SQL (Procedures, Functions, Packages, Triggers, Cursors) |
-| **Version Control** | GitHub |
-| **Development Tools** | Oracle SQL Developer |
-| **Monitoring** | Oracle Enterprise Manager (OEM) |
-| **BI Tools** | SQL Analytics + Window Functions + Materialized Views |
-| **Normalization** | 3NF (Third Normal Form) |
-| **Advanced Features** | Compound Triggers, Custom Exceptions, Holiday Calendar |
+The design separates **master data**, **operational transactions**, and **event/metric data** to support both OLTP and BI use cases.
 
 ---
 
-## 🔒 Security Features
+## ⚙️ Technical Stack
 
-### Access Control
-- **Role-Based Permissions:** Separate privileges for maintenance managers, technicians, and administrators
-- **Employee Authentication:** All maintenance activities tied to individual technician accounts
-- **Audit Trail Integrity:** Tamper-proof logging of all database modifications
-- **Data Encryption:** Sensitive equipment cost data protected with encryption
+| Component         | Technology                                           |
+|:-----------------|:-----------------------------------------------------|
+| **Database**     | Oracle Database 21c XE                               |
+| **Language**     | PL/SQL (Procedures, Functions, Packages, Triggers)   |
+| **Version Control** | GitHub                                            |
+| **Development Tools** | Oracle SQL Developer                            |
+| **Monitoring**   | Oracle Enterprise Manager (OEM)                      |
+| **BI Tools**     | SQL analytics + KPI/Dashboard mockups                |
+| **Normalization**| 3NF (Third Normal Form)                              |
 
-### Audit & Monitoring
-- **Comprehensive Logging:** Every INSERT, UPDATE, DELETE operation recorded with user and timestamp
-- **Change History Tracking:** Before/after values captured for all critical data modifications
-- **Maintenance Activity Logging:** Complete record of who performed maintenance, when, and what was done
-- **Parts Usage Tracking:** Automated inventory deductions with audit trail
+---
 
-### Business Rule Enforcement
-- **Automated Triggers:** Prevent scheduling conflicts, validate maintenance dates, enforce business rules
-- **Custom Exceptions:** Meaningful error messages for equipment not found, insufficient parts, technician unavailability
-- **Data Validation:** CHECK constraints ensure data quality (status values, priority levels, cost ranges)
-- **Referential Integrity:** Foreign keys maintain relationships between equipment, work orders, and technicians
+## 🔐 Reliability & Safety Features
+
+### Operational Control
+- **Single Assignment Rule:** An equipment unit can only be assigned once per site/shift/date combination (no double-booking).
+- **Status-Based Usage:** Equipment status (AVAILABLE, IN_USE, MAINTENANCE, RETIRED) controls where it can appear (assignments vs work orders).
+- **Shift & Site Validation:** All assignments and logs reference valid sites and shifts only.
+
+### Maintenance & Downtime
+- **Preventive Maintenance Schedules:** Interval-based (hours/days/km/tons) schedules ensure regular inspections and servicing.
+- **Work Order Lifecycle:** Status transitions (OPEN → IN_PROGRESS → COMPLETED → CLOSED) controlled by PL/SQL logic.
+- **Downtime Tracking:** Dedicated table for breakdowns and planned maintenance to support availability and MTBF calculations.
+
+### Audit & Governance
+- **Audit Logging:** Triggers/procedures record key changes (INSERT/UPDATE/DELETE) into `AUDIT_LOG` with timestamp, user, action, and table name.
+- **Traceability:** Work orders and maintenance history link back to specific equipment and schedules for full traceability.
+- **Compliance Reporting:** Queries and BI views support reporting on overdue maintenance, open work orders, and downtime trends.
 
 ---
 
 ## 📂 Folder Structure
 
-```
+```text
 Mining_Equipment_Maintenance_Scheduler/
 │
 ├── README.md                                    # 📘 Project Overview & Setup Guide
 │
 ├── database/
-│   ├── scripts/
-│   │   └── scripts/                             # ⚙️ Core SQL Scripts
-│   │       ├── 01_create_pdb.sql                # Phase 4 — Pluggable Database Creation
-│   │       ├── 02_create_tables.sql             # Phase 5 — Table Structures (8 tables)
-│   │       ├── 03_setup_admin_user.sql          # User & Privilege Configuration
-│   │       ├── 04_configure_memory.sql          # SGA/PGA Memory Optimization
-│   │       ├── 05_enable_archivelog.sql         # Backup & Recovery Setup
-│   │       ├── 06_create_sequences.sql          # Auto-increment ID Generators
-│   │       ├── create_table.sql                 # Consolidated Table DDL
-│   │       ├── indexes.sql                      # Performance Indexes
-│   │       ├── insert_data                      # Sample Data (50+ records)
-│   │       ├── 01_custom_exceptions.sql         # User-Defined Exceptions
-│   │       ├── 01_holiday_manager.sql           # Holiday Calendar Package
-│   │       ├── 02_audit_log.sql                 # Audit Trigger Implementation
-│   │       ├── 02_procedures.sql                # Core Stored Procedures
-│   │       ├── 03_functions.sql                 # Utility Functions
-│   │       ├── 04_cursors.sql                   # Explicit Cursor Examples
-│   │       ├── 04_simple_triggers.sql           # Row-Level Triggers
-│   │       ├── 05_compound_triggers.sql         # Statement-Level Triggers
-│   │       ├── 05_window_functions.sql          # Analytics Queries
-│   │       ├── 06_package_spec.sql              # Package Specifications
-│   │       ├── 07_package_body.sql              # Package Bodies
-│   │       ├── 06_comprehensive_test.sql        # Integration Testing
-│   │       ├── 07_verification_queries.sql      # Data Validation
-│   │       ├── 08_testing_procedures.sql        # Procedure Test Cases
-│   │       ├── 09_testing_functions.sql         # Function Test Cases
-│   │       └── 10_testing_packages.sql          # Package Test Cases
+│   ├── scripts/                                 # ⚙️ Core SQL Scripts
+│   │   ├── 01_create_pdb.sql                    # (Optional) PDB / user creation
+│   │   ├── 02_create_tables.sql                 # Table structures (DDL)
+│   │   ├── 03_insert_data.sql                   # Sample data population (DML)
+│   │   ├── 04_validation.sql                    # Integrity & validation checks
+│   │   ├── 05_procedures_functions.sql          # Procedures, functions, packages
+│   │   ├── 06_triggers.sql                      # Triggers & business rules
 │   │
-│   └── documentation/                           # 📘 DB Setup Documentation
-│       └── database_overview.md                 # PDB configuration & architecture
+│   └── documentation/                           # 📘 DB Setup & Design Docs
+│       ├── database_overview.md                 # Schema summary
+│       ├── schema_setup_guide.md                # How to build the DB
+│       ├── testing_and_validation.md            # How it was tested
+│       ├── data_dictionary.md                   # Tables, columns, constraints
+│       ├── architecture.md                      # Architecture overview
+│       └── design_decisions.md                  # Design rationale
 │
 ├── queries/                                     # 🔍 Reporting & Analytics SQL
 │   ├── data_retrieval.sql                       # Basic SELECT queries
-│   ├── analytics_queries.sql                    # Window functions, aggregations
-│   └── audit_queries.sql                        # Maintenance history reports
+│   ├── analytics_queries.sql                    # Window functions & aggregations
+│   └── audit_queries.sql                        # Audit & compliance reports
 │
-├── Business_intelligence/                       # 📊 BI Strategy & Dashboards
+├── business_intelligence/                       # 📊 BI Strategy & Dashboards
 │   ├── bi_requirements.md                       # BI objectives & KPIs
 │   ├── dashboards.md                            # Dashboard mockups
-│   ├── kpi_definitions.md                       # Key performance indicators
-│   ├── scripts/
-│   │   ├── bi_views.sql                         # Materialized Views for BI
-│   │   ├── bi_test_data.sql                     # BI Testing Data
-│   │   └── bi_dashboard_queries.sql             # Dashboard SQL Queries
-│   └── screenshots/
-│       ├── 01_BI_views_list.png                 # BI Views Overview
-│       ├── 02_dashboard1.png                    # Equipment Status Dashboard
-│       ├── 03_dashboard2_comprehensive.png      # Maintenance Analytics Dashboard
-│       └── 04_dashboard3.png                    # Cost Analysis Dashboard
+│   └── kpi_definitions.md                       # Key performance indicators
 │
 ├── screenshots/                                 # 📸 Implementation Evidence
-│   ├── database_objects/                        # Database Structure Screenshots
-│   │   ├── ERD_Diagram.png                      # Entity-Relationship Diagram
-│   │   ├── pdb.png                              # Pluggable Database Setup
-│   │   ├── Tablespace.png                       # Tablespace Configuration
-│   │   ├── sequences.png                        # Sequence Objects
-│   │   ├── memory-configuration.png             # Memory Settings
-│   │   ├── Archive-mode.png                     # Archive Log Configuration
-│   │   ├── Privileges.png                       # User Privileges
-│   │   ├── phase2_mining_equipment.png          # Sample Data Display
-│   │   ├── 01_custom_exceptions.png             # Custom Exception Code
-│   │   ├── 01_holiday_manager.png               # Holiday Package
-│   │   ├── 02_audit_logphase.png                # Audit Log Implementation
-│   │   ├── 02_procedures.png                    # Stored Procedures
-│   │   ├── 03_functions.png                     # Functions Code
-│   │   ├── 03_functionsphase.png                # Additional Functions
-│   │   ├── 04_cursors.png                       # Cursor Implementation
-│   │   ├── 04_simple_triggers.png               # Simple Triggers
-│   │   ├── 05_compound_triggers.png             # Compound Triggers
-│   │   ├── 05_window_functions.png              # Window Functions
-│   │   ├── 06_package_spec.png                  # Package Specification
-│   │   ├── 07_package_body.png                  # Package Body
-│   │   └── Phase_IV_pluggable.png               # PDB Phase 4
-│   │
-│   ├── test_results/                            # Test Execution Screenshots
-│   │   ├── 06_comprehensive_test.png            # Full System Test
-│   │   ├── 08_testing_procedures.png            # Procedure Tests
-│   │   ├── 09_testing_functions.png             # Function Tests
-│   │   ├── 10_testing_packages.png              # Package Tests
-│   │   └── verification.png                     # Data Verification
-│   │
-│   └── oem_monitoring/                          # OEM Screenshots
-│       ├── database_overview.png                # OEM Dashboard
-│       ├── performance_metrics.png              # Performance Monitoring
-│       └── sql_monitoring.png                   # SQL Statement Tracking
+│   ├── database_objects/                        # ERD, table list, code editor
+│   ├── test_results/                            # Execution and test outputs
+│   └── oem_monitoring/                          # Oracle Enterprise Manager views
 │
-└── Documentations/                              # 📚 System-Level Documentation
-    ├── data_dictionary.md                       # All tables, columns, constraints
-    ├── architecture.md                          # System architecture overview
-    ├── design_decisions.md                      # Design rationale & justifications
-    └── phase2_process_m.md                      # Phase 2 implementation notes
-```
+└── documentation/                               # 📚 System-Level Documentation
+    ├── data_dictionary.md                       # Global reference copy (if required)
+    ├── architecture.md                          # System-level architecture
+    └── design_decisions.md                      # High-level design choices
 
----
 
-## 📚 Documentation & BI
+📚 Documentation & BI
+Critical Note
+Full technical details are available in the documentation under database/documentation/ and business_intelligence/.
+| Document                    | Description                                                                 |
+|:---------------------------|:----------------------------------------------------------------------------|
+| Data Dictionary        | Detailed breakdown of all tables, columns, data types, and constraints     |
+| System Architecture    | High-level design of layers, schema groups, and relationships             |
+| Design Decisions       | Justification for 3NF model, separation of assignments/usage/maintenance  |
+| BI Requirements        | KPI definitions and dashboard requirements for maintenance analytics      |
+| KPI Definitions        | Exact formulas for utilisation, availability, MTBF, downtime, and costs   |
+| Dashboards             | Mockups and descriptions of maintenance and operations dashboards         |
 
-### Critical Note
-Full technical details are available in the linked documents below.
+📸 Screenshots
+Planned Evidence
 
-| Document | Description |
-|:---|:---|
-| **Data Dictionary** | Detailed breakdown of all 8 tables, columns, data types, and constraints |
-| **System Architecture** | High-level design diagrams (ERD) and relationship explanations |
-| **Design Decisions** | Justification for 3NF normalization, PDB architecture, trigger logic |
-| **BI Requirements** | KPI definitions and dashboard mockups for maintenance decision support |
-| **Phase 2 Process** | Implementation methodology and lessons learned |
 
----
+Database Objects (SQL Developer)
 
-## 📸 Screenshots
+Object browser showing:
 
-### Section 1: Database Architecture & Configuration
+All core tables (EQUIPMENT, WORK_ORDERS, EQUIPMENT_ASSIGNMENT, etc.)
+Procedures, functions, packages, and triggers
 
 
 
-### Section 2: Sample Data
 
-#### 📸 **SCREENSHOT 8: Equipment Sample Data**
-**Location:** `screenshots/database_objects/phase2_mining_equipment.png`
 
-![Sample Data](./screenshots/database_objects/phase2_mining_equipment.png)
 
-*Figure 8: Sample equipment records showing 5-10 rows with equipment types (Excavators, Drills, Trucks), serial numbers, status, and maintenance dates*
+ER Diagram
 
----
+Complete ERD with:
 
-### Section 3: PL/SQL Objects Implementation
+All tables and their primary keys
+Foreign key relationships (equipment → assignments → usage/maintenance)
 
-#### 📸 **SCREENSHOT 9: Custom Exceptions**
-**Location:** `screenshots/database_objects/01_custom_exceptions.png`
 
-![Custom Exceptions](./screenshots/database_objects/01_custom_exceptions.png)
 
-*Figure 9: User-defined exceptions (EQUIPMENT_NOT_FOUND, INVALID_MAINTENANCE_DATE, INSUFFICIENT_PARTS, TECHNICIAN_NOT_AVAILABLE) with error codes*
 
----
 
-#### 📸 **SCREENSHOT 10: Holiday Manager Package**
-**Location:** `screenshots/database_objects/01_holiday_manager.png`
 
-![Holiday Manager](./screenshots/database_objects/01_holiday_manager.png)
+Sample Data (5–10 Rows)
 
-*Figure 10: Holiday calendar package preventing maintenance scheduling on public holidays and weekends*
+Example queries, e.g.:
 
----
+SELECT * FROM EQUIPMENT FETCH FIRST 10 ROWS ONLY;
+SELECT * FROM WORK_ORDERS FETCH FIRST 10 ROWS ONLY;
 
-#### 📸 **SCREENSHOT 11: Audit Log Implementation**
-**Location:** `screenshots/database_objects/02_audit_logphase.png`
 
-![Audit Log](./screenshots/database_objects/02_audit_logphase.png)
 
-*Figure 11: Comprehensive audit trail trigger capturing INSERT, UPDATE, DELETE operations with user, timestamp, and old/new values*
 
----
 
-#### 📸 **SCREENSHOT 16: Simple Triggers**
-**Location:** `screenshots/database_objects/04_simple_triggers.png`
 
-![Simple Triggers](./screenshots/database_objects/04_simple_triggers.png)
 
-*Figure 16: Row-level BEFORE/AFTER triggers (TRG_EQUIPMENT_AUDIT, TRG_VALIDATE_MAINTENANCE, TRG_UPDATE_TIMESTAMP) for data validation and audit logging*
+Procedures / Triggers in Editor
 
----
+PL/SQL editor displaying:
 
-#### 📸 **SCREENSHOT 17: Compound Triggers**
-**Location:** `screenshots/database_objects/05_compound_triggers.png`
+A maintenance procedure (e.g. generating work orders from due schedules)
+An audit or schedule-update trigger
 
-![Compound Triggers](./screenshots/database_objects/05_compound_triggers.png)
 
-*Figure 17: Statement-level compound trigger (TRG_PARTS_INVENTORY_MGMT) handling BEFORE STATEMENT, BEFORE EACH ROW, AFTER EACH ROW, AFTER STATEMENT events*
 
----
 
-### Section 4: Testing & Validation
 
-#### 📸 **SCREENSHOT 21: Comprehensive System Test**
-**Location:** `screenshots/test_results/06_comprehensive_test.png`
 
-![Comprehensive Test](./screenshots/test_results/06_comprehensive_test.png)
 
-*Figure 21: End-to-end integration testing showing successful execution of all procedures, functions, and triggers with DBMS_OUTPUT results*
+Test Results and Execution
 
----
+Anonymous PL/SQL blocks running test scenarios
+DBMS_OUTPUT showing results (e.g. created work orders, calculated KPIs)
+Validation queries confirming constraints and relationships
 
-#### 📸 **SCREENSHOT 22: Procedure Testing**
-**Location:** `screenshots/test_results/08_testing_procedures.png`
 
-![Procedure Tests](./screenshots/test_results/08_testing_procedures.png)
 
-*Figure 22: Unit tests for stored procedures with input parameters, expected outputs, and actual results validation*
 
----
 
-#### 📸 **SCREENSHOT 23: Function Testing**
-**Location:** `screenshots/test_results/09_testing_functions.png`
+Audit Log Entries
 
-![Function Tests](./screenshots/test_results/09_testing_functions.png)
+Query against AUDIT_LOG showing:
 
-*Figure 23: Function return value testing showing calculations for equipment age, next maintenance date, downtime cost, and parts availability*
+EVENT_DATETIME, USER_NAME, ACTION_TYPE, TABLE_NAME, RECORD_PK
 
----
 
-### Section 5: Oracle Enterprise Manager Monitoring
 
-#### 📸 **SCREENSHOT 26: OEM Database Overview**
-**Location:** `screenshots/oem_monitoring/database_overview.png`
 
-![OEM Dashboard](./screenshots/oem_monitoring/database_overview.png)
 
-*Figure 26: Oracle Enterprise Manager dashboard showing database status, uptime, instance details, and overall health metrics*
 
----
+OEM Monitoring (Optional)
 
-#### 📸 **SCREENSHOT 27: Performance Metrics**
-**Location:** `screenshots/oem_monitoring/performance_metrics.png`
+Oracle Enterprise Manager screenshots for:
 
-![Performance Metrics](./screenshots/oem_monitoring/performance_metrics.png)
+Session activity
+Performance metrics
+Tablespace / storage usage
 
-*Figure 27: Real-time performance monitoring displaying CPU usage, memory allocation, I/O throughput, and active sessions*
 
----
 
-#### 📸 **SCREENSHOT 28: SQL Monitoring**
-**Location:** `screenshots/oem_monitoring/sql_monitoring.png`
 
-![SQL Monitoring](./screenshots/oem_monitoring/sql_monitoring.png)
 
-*Figure 28: Active SQL statement tracking showing execution plans, elapsed time, logical reads, and resource consumption*
 
----
 
-## 🚀 Quick Start Guide
+🚀 Quick Start Guide
+Follow these steps to deploy the Mining Equipment Maintenance Scheduler locally.
+Prerequisites
 
+Oracle Database 21c (XE or Enterprise Edition)
+Oracle SQL Developer
+Git or GitHub access
 
+Step 1: Database / PDB Creation (If Applicable)
 
-## 📊 Business Intelligence
 
-### Key Performance Indicators (KPIs)
+Open SQL Developer and connect as SYSDBA.
 
-#### Equipment Performance
-- **Equipment Availability Rate:** % of time equipment is operational vs. total time
-- **Mean Time Between Failures (MTBF):** Average operating hours between breakdowns
-- **Mean Time To Repair (MTTR):** Average hours to complete repairs
-- **Equipment Utilization Rate:** Actual usage hours vs. available hours
 
-#### Maintenance Efficiency
-- **Preventive Maintenance Compliance:** % of scheduled maintenance completed on time
-- **Work Order Completion Rate:** % of work orders closed within target timeframe
-- **First-Time Fix Rate:** % of maintenance tasks completed without rework
-- **Technician Productivity:** Average work orders completed per technician per month
+Run database/scripts/01_create_pdb.sql (if included) to create the PDB and schema user.
 
-#### Cost Management
-- **Maintenance Cost Per Equipment:** Total maintenance spend divided by equipment count
-- **Downtime Cost Impact:** Lost production value due to equipment unavailability
-- **Parts Cost Trend:** Monthly parts expenditure with variance analysis
-- **Labor Cost Efficiency:** Labor hours vs. planned hours ratio
 
-#### Inventory Management
-- **Parts Stockout Rate:** % of time critical parts are unavailable
-- **Inventory Turnover Ratio:** Parts used vs. average inventory value
-- **Reorder Alert Accuracy:** % of automated reorder alerts that prevent stockouts
+Verify the PDB is open:
+SELECT name, open_mode FROM v$pdbs;
 
-### Dashboard Mockups
 
-1. **Executive Summary Dashboard** *(Screenshot 30)*
-   - Total equipment count by type and status
-   - Current availability rate across all equipment
-   - Month-to-date maintenance costs vs. budget
-   - Open work orders by priority
-   - Recent violations and critical alerts
 
-2. **Equipment Health Dashboard**
-   - Equipment status distribution (Operational/Maintenance/Retired)
-   - Equipment ranked by downtime hours
-   - Upcoming maintenance schedule (next 30 days)
-   - Equipment age analysis with replacement recommendations
-   - Top 10 most frequently serviced equipment
+Step 2: Schema Implementation
 
-3. **Maintenance Analytics Dashboard** *(Screenshot 31)*
-   - Preventive vs. corrective maintenance ratio
-   - Work order completion trends (last 12 months)
-   - Technician workload distribution
-   - Average maintenance duration by equipment type
-   - Maintenance cost breakdown (parts vs. labor)
 
-4. **Cost Analysis Dashboard** *(Screenshot 32)*
-   - Total maintenance spend by equipment category
-   - Downtime cost impact analysis
-   - Parts cost trends with forecast
-   - Budget variance analysis
-   - ROI on preventive maintenance programs
+Connect as the project schema user (e.g. mining_scheduler_user).
 
----
 
----
+Run table and constraint scripts:
+@database/scripts/02_create_tables.sql
+@database/scripts/04_validation.sql      -- Optional structural checks
 
-## 🎓 Learning Outcomes
 
-This project demonstrates proficiency in:
 
-### Database Design
-- ✅ 3NF normalization to eliminate data redundancy
-- ✅ Entity-relationship modeling for complex business domains
-- ✅ Constraint design (PK, FK, CHECK, UNIQUE, NOT NULL)
-- ✅ Index optimization for query performance
+Confirm tables are created (e.g. SELECT * FROM EQUIPMENT; should return no rows but no errors).
 
-### PL/SQL Programming
-- ✅ Stored procedures with IN/OUT/IN OUT parameters
-- ✅ Functions with return types and error handling
-- ✅ Packages for code organization and encapsulation
-- ✅ Explicit cursors for row-by-row processing
-- ✅ Custom exception handling with meaningful error messages
 
-### Advanced Features
-- ✅ Simple triggers (BEFORE/AFTER INSERT/UPDATE/DELETE)
-- ✅ Compound triggers for statement-level operations
-- ✅ Window functions (ROW_NUMBER, RANK, DENSE_RANK, LAG, LEAD)
-- ✅ Aggregate functions with GROUP BY and HAVING
-- ✅ Complex multi-table joins and subqueries
+Step 3: Data Population
 
-### Database Administration
-- ✅ Pluggable Database (PDB) architecture
-- ✅ Memory configuration (SGA/PGA tuning)
-- ✅ Archive log mode for backup and recovery
-- ✅ User and privilege management
-- ✅ Tablespace and storage management
 
-### Business Intelligence
-- ✅ Materialized views for BI performance
-- ✅ KPI definition and measurement
-- ✅ Dashboard design for decision support
-- ✅ Trend analysis and forecasting
+Run the sample data script:
+@database/scripts/03_insert_data.sql
 
----
 
-## 🔧 Troubleshooting
 
-### Common Issues
+Check that key tables are populated:
+SELECT COUNT(*) FROM EQUIPMENT;
+SELECT COUNT(*) FROM WORK_ORDERS;
+SELECT COUNT(*) FROM EQUIPMENT_ASSIGNMENT;
 
-**Issue:** ORA-00001: unique constraint violated
-- **Solution:** Check for duplicate EQUIPMENT.SERIAL_NUMBER or PARTS.PART_NUMBER values
 
-**Issue:** ORA-02292: integrity constraint violated - child record found
-- **Solution:** Delete child records (WORK_ORDERS, MAINTENANCE_HISTORY) before deleting parent (EQUIPMENT)
 
-**Issue:** ORA-04091: table is mutating, trigger may not see it
-- **Solution:** Use compound triggers or autonomous transactions for complex trigger logic
+Step 4: PL/SQL Logic (Procedures, Functions, Packages, Triggers)
 
-**Issue:** Custom exception not raised
-- **Solution:** Verify exception is declared in package specification and raised with RAISE_APPLICATION_ERROR
 
-**Issue:** Trigger not firing
-- **Solution:** Check trigger status with `SELECT trigger_name, status FROM user_triggers`
+Create program units:
+@database/scripts/05_procedures_functions.sql
+@database/scripts/06_triggers.sql
 
-**Issue:** Procedure compiles with warnings
-- **Solution:** Run `SHOW ERRORS` to see compilation errors and fix syntax issues
 
-## 🌟 Project Highlights
 
-- **8 Normalized Tables** following 3NF principles
-- **50+ Sample Records** representing realistic mining operations
-- **15+ Stored Procedures** for core business operations
-- **10+ Functions** for calculations and validations
-- **12+ Triggers** for automation and audit logging
-- **3 Packages** for organized code modules
-- **20+ Analytics Queries** using window functions and aggregations
-- **4 BI Dashboards** for operational insights
-- **100% Test Coverage** with comprehensive test scripts
-- **32 Screenshots** documenting every implementation phase
-- **Complete Documentation** including data dictionary and architecture diagrams
+Ensure all procedures, functions, packages, and triggers compile successfully in SQL Developer.
+
+
+Step 5: Testing
+
+
+Enable server output:
+SET SERVEROUTPUT ON;
+
+
+
+Execute the test blocks included at the bottom of the scripts (or in queries/):
+@queries/data_retrieval.sql
+@queries/analytics_queries.sql
+@queries/audit_queries.sql
+
+
+
+Confirm:
+
+Assignments are created correctly and double-booking is prevented.
+Work orders and maintenance history behave as expected.
+Downtime and usage logs are captured.
+Audit log entries are generated for configured tables.
+
+
+
+Step 6: Documentation & Screenshots
+
+
+Review and, if needed, update:
+
+database/documentation/data_dictionary.md
+database/documentation/architecture.md
+database/documentation/design_decisions.md
+
+
+
+Generate / export the ER diagram and save it to:
+
+screenshots/database_objects/erd_full_schema.png
+
+
+
+Capture screenshots of:
+
+Database objects, sample data, code, tests, and audit log
+Place them under screenshots/database_objects/ and screenshots/test_results/
+
+
+
+
+📊 Business Intelligence
+Key Performance Indicators (KPIs)
+
+Equipment Utilisation (%)
+
+Operating hours / available shift hours per equipment, shift, or site.
+
+
+Availability (%)
+
+(Total time − Downtime) / Total time for each equipment unit.
+
+
+Mean Time Between Failures (MTBF)
+
+Total operating hours / number of breakdown events.
+
+
+Mean Time To Repair (MTTR)
+
+Average duration of breakdown-related work orders.
+
+
+Maintenance Cost per Equipment
+
+Sum of labour and parts cost per equipment, per month.
+
+
+Fuel Efficiency
+
+Fuel used per ton moved or per operating hour.
+
+
+
+Dashboard Mockups
+
+
+Operational Control Dashboard
+
+Current equipment assignments by site and shift.
+Today’s open work orders by priority and status.
+
+
+
+Maintenance Performance Dashboard
+
+MTBF and MTTR trends.
+Overdue vs completed preventive maintenance.
+
+
+
+Cost & Efficiency Dashboard
+
+Maintenance cost per equipment and per site.
+Fuel efficiency vs production output.
+
+
+
+Downtime & Availability Dashboard
+
+Breakdown events by cause and equipment type.
+Availability percentage by equipment and site.
+
+
+
+
+
+You can tweak the PDB name, user name, and any counts (e.g., number of sample records) to match your actual implementation.

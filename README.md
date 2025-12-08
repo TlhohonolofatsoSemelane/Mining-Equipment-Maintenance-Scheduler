@@ -160,7 +160,7 @@ Mining_Equipment_Maintenance_Scheduler/
     ├── data_dictionary.md                       # Global reference copy (if required)
     ├── architecture.md                          # System-level architecture
     └── design_decisions.md                      # High-level design choices
-
+```
 
 📚 Documentation & BI
 Critical Note

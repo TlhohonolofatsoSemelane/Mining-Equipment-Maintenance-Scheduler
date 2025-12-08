@@ -162,8 +162,9 @@ Mining_Equipment_Maintenance_Scheduler/
     └── design_decisions.md                      # High-level design choices
 ```
 
-📚 Documentation & BI
-Critical Note
+# 📚 Documentation & BI
+
+## Critical Note
 Full technical details are available in the documentation under database/documentation/ and business_intelligence/.
 | Document                    | Description                                                                 |
 |:---------------------------|:----------------------------------------------------------------------------|

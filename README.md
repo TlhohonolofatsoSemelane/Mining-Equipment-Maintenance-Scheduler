@@ -160,11 +160,12 @@ Mining_Equipment_Maintenance_Scheduler/
     ├── data_dictionary.md                       # Global reference copy (if required)
     ├── architecture.md                          # System-level architecture
     └── design_decisions.md                      # High-level design choices
+```
 
+# 📚 Documentation & BI
 
-📚 Documentation & BI
-Critical Note
-Full technical details are available in the documentation under database/documentation/ and business_intelligence/.
+## Critical Note
+### Full technical details are available in the documentation under database/documentation/ and business_intelligence/.
 | Document                    | Description                                                                 |
 |:---------------------------|:----------------------------------------------------------------------------|
 | Data Dictionary        | Detailed breakdown of all tables, columns, data types, and constraints     |
@@ -174,273 +175,187 @@ Full technical details are available in the documentation under database/documen
 | KPI Definitions        | Exact formulas for utilisation, availability, MTBF, downtime, and costs   |
 | Dashboards             | Mockups and descriptions of maintenance and operations dashboards         |
 
-📸 Screenshots
-Planned Evidence
+# 📸 Screenshots
+## Planned Evidence
 
 
-Database Objects (SQL Developer)
+### 1.Database Objects 
 
-Object browser showing:
+#### Object browser showing:
 
-All core tables (EQUIPMENT, WORK_ORDERS, EQUIPMENT_ASSIGNMENT, etc.)
+#### All core tables (EQUIPMENT, WORK_ORDERS, EQUIPMENT_ASSIGNMENT, etc.)
 Procedures, functions, packages, and triggers
 
+<img width="570" height="369" alt="Database_Object" src="https://github.com/user-attachments/assets/099738a1-b11f-4635-9980-7f6eb5c2cf71" />
 
 
+### 2.ER Diagram
 
+#### Complete ERD with:
 
+#### All tables and their primary keys
+#### Foreign key relationships (equipment → assignments → usage/maintenance)
 
-ER Diagram
+<img width="2748" height="1858" alt="ERD_Diagram" src="https://github.com/user-attachments/assets/402c0c28-e960-4d87-9d59-aaf80e5f7d4f" />
 
-Complete ERD with:
+### 3.Sample Data 
 
-All tables and their primary keys
-Foreign key relationships (equipment → assignments → usage/maintenance)
+#### Example queries, e.g.:
 
+#### SELECT * FROM EQUIPMENT FETCH FIRST 10 ROWS ONLY;
 
+<img width="959" height="539" alt="sample_data" src="https://github.com/user-attachments/assets/93ecdd34-cf01-4e7f-95d5-977dfaf6b865" />
 
+### 4.Procedures / Triggers in Editor
 
+#### PL/SQL editor displaying:
 
-
-Sample Data (5–10 Rows)
-
-Example queries, e.g.:
-
-SELECT * FROM EQUIPMENT FETCH FIRST 10 ROWS ONLY;
-SELECT * FROM WORK_ORDERS FETCH FIRST 10 ROWS ONLY;
-
-
-
-
-
-
-
-Procedures / Triggers in Editor
-
-PL/SQL editor displaying:
-
-A maintenance procedure (e.g. generating work orders from due schedules)
+#### A maintenance procedure (e.g. generating work orders from due schedules)
 An audit or schedule-update trigger
 
+<img width="959" height="528" alt="02_procedures" src="https://github.com/user-attachments/assets/f8c75479-847a-47ce-8415-fd07d81d7930" />
 
+<img width="959" height="501" alt="03_functions" src="https://github.com/user-attachments/assets/6d0871ca-00b4-4de0-88ff-1662a124c0e1" />
 
+ <img width="959" height="538" alt="04_simple_triggers" src="https://github.com/user-attachments/assets/deed8975-0cf6-4f44-b92b-8ac284c72f91" />
 
+ <img width="959" height="533" alt="05_compound_trigger" src="https://github.com/user-attachments/assets/9319a46e-802b-44c0-b539-ecea1369269b" />
 
 
+### 5.Test Results and Execution
 
-Test Results and Execution
+#### Anonymous PL/SQL blocks running test scenarios
+#### DBMS_OUTPUT showing results (e.g. created work orders, calculated KPIs)
+#### Validation queries confirming constraints and relationships
 
-Anonymous PL/SQL blocks running test scenarios
-DBMS_OUTPUT showing results (e.g. created work orders, calculated KPIs)
-Validation queries confirming constraints and relationships
+<img width="959" height="536" alt="06_comprehensive_testing" src="https://github.com/user-attachments/assets/9ee593eb-ea04-450f-b537-307a7505a44d" />
 
+<img width="955" height="539" alt="08_testing_procedures" src="https://github.com/user-attachments/assets/3bcb1cfe-ccbf-4342-aece-0891ea0d6b0e" />
 
+<img width="959" height="527" alt="09_testing_functions" src="https://github.com/user-attachments/assets/ff94aa35-0145-4131-bbed-47a55423cf03" />
 
+### 6.Audit Log Entries
 
+### Query against AUDIT_LOG showing:
 
-Audit Log Entries
+#### EVENT_DATETIME, USER_NAME, ACTION_TYPE, TABLE_NAME, RECORD_PK
 
-Query against AUDIT_LOG showing:
+<img width="958" height="535" alt="Basic_retrieval_audit_logs" src="https://github.com/user-attachments/assets/96518ddb-6711-4c01-a7d4-882c4cfb198f" />
 
-EVENT_DATETIME, USER_NAME, ACTION_TYPE, TABLE_NAME, RECORD_PK
 
+### 7.OEM Monitoring 
 
+#### Oracle Enterprise Manager screenshots for:
 
+#### Session activity
+#### Performance metrics
+#### Tablespace / storage usage
 
+<img width="921" height="400" alt="database_overview" src="https://github.com/user-attachments/assets/6a7201a9-612f-4305-8697-bbcff87f4266" />
 
+<img width="913" height="236" alt="performance_metrics" src="https://github.com/user-attachments/assets/496d082b-2e2e-484d-a30d-fdc57289724d" />
 
-OEM Monitoring (Optional)
+<img width="919" height="331" alt="sql_monitoring" src="https://github.com/user-attachments/assets/a8d30c95-fa84-408b-9393-d4fbcc1bb8fa" />
 
-Oracle Enterprise Manager screenshots for:
 
-Session activity
-Performance metrics
-Tablespace / storage usage
+### 🚀 Quick Start Guide
 
+#### Follow these steps to deploy the project locally.
 
+#### Prerequisites:
 
+#### Oracle Database 21c (XE or Enterprise Edition)
 
+#### Oracle SQL Developer
 
+#### GitHub account
 
+#### Step 1: Database Creation
 
-🚀 Quick Start Guide
-Follow these steps to deploy the Mining Equipment Maintenance Scheduler locally.
-Prerequisites
+#### Open SQL Developer and connect as SYSDBA
 
-Oracle Database 21c (XE or Enterprise Edition)
-Oracle SQL Developer
-Git or GitHub access
+#### Run database/scripts/01_create_pdb.sql to create the PDB and Admin User
 
-Step 1: Database / PDB Creation (If Applicable)
+#### Verify PDB is open:
 
+##### SELECT name, open_mode FROM v$pdbs;
 
-Open SQL Developer and connect as SYSDBA.
+#### Step 2: Schema Implementation
 
+#### Connect as mining_scheduler_admin
 
-Run database/scripts/01_create_pdb.sql (if included) to create the PDB and schema user.
+#### Run database/scripts/02_create_tables.sql to build the structure
 
+#### Run database/scripts/03_insert_data.sql to load 100+ sample records
 
-Verify the PDB is open:
-SELECT name, open_mode FROM v$pdbs;
+#### Run database/scripts/04_validation.sql to confirm data integrity
 
+#### Step 3: PL/SQL Logic
 
+#### Run database/scripts/05_procedures_functions.sql to create procedures, functions, packages
 
-Step 2: Schema Implementation
+#### Run database/scripts/06_triggers.sql to implement business rules
 
+####Step 4: Testing
 
-Connect as the project schema user (e.g. mining_scheduler_user).
+#### Execute test blocks at the end of each script
 
+#### Verify outputs using SET SERVEROUTPUT ON
 
-Run table and constraint scripts:
-@database/scripts/02_create_tables.sql
-@database/scripts/04_validation.sql      -- Optional structural checks
+#### Run audit queries to confirm logging works
 
+#### Step 5: Documentation
 
+#### Update documentation/data_dictionary.md with actual table structures
 
-Confirm tables are created (e.g. SELECT * FROM EQUIPMENT; should return no rows but no errors).
+##### Generate ER diagram and save to documentation/
 
+#### Take screenshots and organize in screenshots/ folder
 
-Step 3: Data Population
 
+## 📊 Business Intelligence
 
-Run the sample data script:
-@database/scripts/03_insert_data.sql
+The Mining Equipment Management System includes a SQL‑driven BI layer with **3 dashboards**, **13 BI views**, and **35+ KPIs**, documented in:
 
+- `Business intelligence/dashboards.md`
+- `Business intelligence/kpi_definitions.md`
+- `Business intelligence/bi_requirements.md`
+- `Business intelligence/scripts/bi_views.sql`
+- `Business intelligence/scripts/bi_dashboard_queries.sql`
 
+### 🔑 Key KPIs (Examples)
 
-Check that key tables are populated:
-SELECT COUNT(*) FROM EQUIPMENT;
-SELECT COUNT(*) FROM WORK_ORDERS;
-SELECT COUNT(*) FROM EQUIPMENT_ASSIGNMENT;
+- **Equipment Utilisation (%)** – Operating hours vs available hours per equipment, shift, or site.  
+- **Availability (%)** – (Total time − downtime) / total time per unit.  
+- **MTBF / MTTR** – Mean time between failures and mean time to repair, from downtime and maintenance data.  
+- **Maintenance Completion & Cost** – Scheduled vs completed work, and cost per equipment / site.  
+- **Fuel Efficiency & Cost** – Litres and cost per operating hour or ton moved.  
+- **Compliance Rate & Violations** – Allowed vs denied operations, weekend/holiday violations, and table‑level compliance.
 
+### 📈 Dashboards (Console / SQL-Based)
 
+Implemented as formatted SQL reports (see `bi_dashboard_queries.sql`) and illustrated in:
 
-Step 4: PL/SQL Logic (Procedures, Functions, Packages, Triggers)
+- `Business intelligence/screenshots/02_dashboard1_executive.png`
+- `Business intelligence/screenshots/03_dashboard2_compliance..png`
+- `Business intelligence/screenshots/04_dashboard3_performance.png`
 
+**Dashboard 1 – Executive Summary**
 
-Create program units:
-@database/scripts/05_procedures_functions.sql
-@database/scripts/06_triggers.sql
+- High‑level KPIs from `v_executive_kpi_cards`.  
+- Monthly trends and department performance.  
+- Daily snapshot of assignments, equipment, operators, and sites.
 
+**Dashboard 2 – Audit & Compliance**
 
+- Overall compliance and violation rates from `v_compliance_overview`.  
+- Compliance by table (`v_compliance_by_table`) and violation patterns.  
+- Recent denied operations from the audit log.
 
-Ensure all procedures, functions, packages, and triggers compile successfully in SQL Developer.
+**Dashboard 3 – Performance & Resources**
 
+- Equipment, operator, and site performance views.  
+- Maintenance schedule status, downtime summaries, and fuel consumption.  
+- Resource usage by site and equipment status distribution.
 
-Step 5: Testing
-
-
-Enable server output:
-SET SERVEROUTPUT ON;
-
-
-
-Execute the test blocks included at the bottom of the scripts (or in queries/):
-@queries/data_retrieval.sql
-@queries/analytics_queries.sql
-@queries/audit_queries.sql
-
-
-
-Confirm:
-
-Assignments are created correctly and double-booking is prevented.
-Work orders and maintenance history behave as expected.
-Downtime and usage logs are captured.
-Audit log entries are generated for configured tables.
-
-
-
-Step 6: Documentation & Screenshots
-
-
-Review and, if needed, update:
-
-database/documentation/data_dictionary.md
-database/documentation/architecture.md
-database/documentation/design_decisions.md
-
-
-
-Generate / export the ER diagram and save it to:
-
-screenshots/database_objects/erd_full_schema.png
-
-
-
-Capture screenshots of:
-
-Database objects, sample data, code, tests, and audit log
-Place them under screenshots/database_objects/ and screenshots/test_results/
-
-
-
-
-📊 Business Intelligence
-Key Performance Indicators (KPIs)
-
-Equipment Utilisation (%)
-
-Operating hours / available shift hours per equipment, shift, or site.
-
-
-Availability (%)
-
-(Total time − Downtime) / Total time for each equipment unit.
-
-
-Mean Time Between Failures (MTBF)
-
-Total operating hours / number of breakdown events.
-
-
-Mean Time To Repair (MTTR)
-
-Average duration of breakdown-related work orders.
-
-
-Maintenance Cost per Equipment
-
-Sum of labour and parts cost per equipment, per month.
-
-
-Fuel Efficiency
-
-Fuel used per ton moved or per operating hour.
-
-
-
-Dashboard Mockups
-
-
-Operational Control Dashboard
-
-Current equipment assignments by site and shift.
-Today’s open work orders by priority and status.
-
-
-
-Maintenance Performance Dashboard
-
-MTBF and MTTR trends.
-Overdue vs completed preventive maintenance.
-
-
-
-Cost & Efficiency Dashboard
-
-Maintenance cost per equipment and per site.
-Fuel efficiency vs production output.
-
-
-
-Downtime & Availability Dashboard
-
-Breakdown events by cause and equipment type.
-Availability percentage by equipment and site.
-
-
-
-
-
-You can tweak the PDB name, user name, and any counts (e.g., number of sample records) to match your actual implementation.
+A full description of layout, KPIs, and view definitions is provided in the BI documents under the `Business intelligence/` folder, with `01_BI_views_list.png` showing all BI views created.

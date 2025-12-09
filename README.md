@@ -165,7 +165,7 @@ Mining_Equipment_Maintenance_Scheduler/
 # 📚 Documentation & BI
 
 ## Critical Note
-Full technical details are available in the documentation under database/documentation/ and business_intelligence/.
+### Full technical details are available in the documentation under database/documentation/ and business_intelligence/.
 | Document                    | Description                                                                 |
 |:---------------------------|:----------------------------------------------------------------------------|
 | Data Dictionary        | Detailed breakdown of all tables, columns, data types, and constraints     |
@@ -175,15 +175,15 @@ Full technical details are available in the documentation under database/documen
 | KPI Definitions        | Exact formulas for utilisation, availability, MTBF, downtime, and costs   |
 | Dashboards             | Mockups and descriptions of maintenance and operations dashboards         |
 
-📸 Screenshots
-Planned Evidence
+# 📸 Screenshots
+## Planned Evidence
 
 
-Database Objects (SQL Developer)
+### 1.Database Objects (SQL Developer)
 
-Object browser showing:
+### Object browser showing:
 
-All core tables (EQUIPMENT, WORK_ORDERS, EQUIPMENT_ASSIGNMENT, etc.)
+### All core tables (EQUIPMENT, WORK_ORDERS, EQUIPMENT_ASSIGNMENT, etc.)
 Procedures, functions, packages, and triggers
 
 
@@ -191,13 +191,14 @@ Procedures, functions, packages, and triggers
 
 
 
-ER Diagram
+### 2.ER Diagram
 
-Complete ERD with:
+#### Complete ERD with:
 
-All tables and their primary keys
-Foreign key relationships (equipment → assignments → usage/maintenance)
+#### All tables and their primary keys
+#### Foreign key relationships (equipment → assignments → usage/maintenance)
 
+<img width="2748" height="1858" alt="ERD_Diagram" src="https://github.com/user-attachments/assets/402c0c28-e960-4d87-9d59-aaf80e5f7d4f" />
 
 
 
@@ -208,7 +209,9 @@ Sample Data (5–10 Rows)
 Example queries, e.g.:
 
 SELECT * FROM EQUIPMENT FETCH FIRST 10 ROWS ONLY;
-SELECT * FROM WORK_ORDERS FETCH FIRST 10 ROWS ONLY;
+
+<img width="959" height="539" alt="sample_data" src="https://github.com/user-attachments/assets/93ecdd34-cf01-4e7f-95d5-977dfaf6b865" />
+
 
 
 

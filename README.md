@@ -362,71 +362,49 @@ Place them under screenshots/database_objects/ and screenshots/test_results/
 
 
 
+## 📊 Business Intelligence
 
-### 📊 Business Intelligence
-#### Key Performance Indicators (KPIs)
+The Mining Equipment Management System includes a SQL‑driven BI layer with **3 dashboards**, **13 BI views**, and **35+ KPIs**, documented in:
 
-#### Equipment Utilisation (%)
+- `Business intelligence/dashboards.md`
+- `Business intelligence/kpi_definitions.md`
+- `Business intelligence/bi_requirements.md`
+- `Business intelligence/scripts/bi_views.sql`
+- `Business intelligence/scripts/bi_dashboard_queries.sql`
 
-Operating hours / available shift hours per equipment, shift, or site.
+### 🔑 Key KPIs (Examples)
 
+- **Equipment Utilisation (%)** – Operating hours vs available hours per equipment, shift, or site.  
+- **Availability (%)** – (Total time − downtime) / total time per unit.  
+- **MTBF / MTTR** – Mean time between failures and mean time to repair, from downtime and maintenance data.  
+- **Maintenance Completion & Cost** – Scheduled vs completed work, and cost per equipment / site.  
+- **Fuel Efficiency & Cost** – Litres and cost per operating hour or ton moved.  
+- **Compliance Rate & Violations** – Allowed vs denied operations, weekend/holiday violations, and table‑level compliance.
 
-Availability (%)
+### 📈 Dashboards (Console / SQL-Based)
 
-(Total time − Downtime) / Total time for each equipment unit.
+Implemented as formatted SQL reports (see `bi_dashboard_queries.sql`) and illustrated in:
 
+- `Business intelligence/screenshots/02_dashboard1_executive.png`
+- `Business intelligence/screenshots/03_dashboard2_compliance..png`
+- `Business intelligence/screenshots/04_dashboard3_performance.png`
 
-Mean Time Between Failures (MTBF)
+**Dashboard 1 – Executive Summary**
 
-Total operating hours / number of breakdown events.
+- High‑level KPIs from `v_executive_kpi_cards`.  
+- Monthly trends and department performance.  
+- Daily snapshot of assignments, equipment, operators, and sites.
 
+**Dashboard 2 – Audit & Compliance**
 
-Mean Time To Repair (MTTR)
+- Overall compliance and violation rates from `v_compliance_overview`.  
+- Compliance by table (`v_compliance_by_table`) and violation patterns.  
+- Recent denied operations from the audit log.
 
-Average duration of breakdown-related work orders.
+**Dashboard 3 – Performance & Resources**
 
+- Equipment, operator, and site performance views.  
+- Maintenance schedule status, downtime summaries, and fuel consumption.  
+- Resource usage by site and equipment status distribution.
 
-Maintenance Cost per Equipment
-
-Sum of labour and parts cost per equipment, per month.
-
-
-Fuel Efficiency
-
-Fuel used per ton moved or per operating hour.
-
-
-
-Dashboard Mockups
-
-
-Operational Control Dashboard
-
-Current equipment assignments by site and shift.
-Today’s open work orders by priority and status.
-
-
-
-Maintenance Performance Dashboard
-
-MTBF and MTTR trends.
-Overdue vs completed preventive maintenance.
-
-
-
-Cost & Efficiency Dashboard
-
-Maintenance cost per equipment and per site.
-Fuel efficiency vs production output.
-
-
-
-Downtime & Availability Dashboard
-
-Breakdown events by cause and equipment type.
-Availability percentage by equipment and site.
-
-
-
-
-
+A full description of layout, KPIs, and view definitions is provided in the BI documents under the `Business intelligence/` folder, with `01_BI_views_list.png` showing all BI views created.

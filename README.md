@@ -179,7 +179,7 @@ Mining_Equipment_Maintenance_Scheduler/
 ## Planned Evidence
 
 
-### 1.Database Objects (SQL Developer)
+### 1.Database Objects 
 
 #### Object browser showing:
 
@@ -198,7 +198,7 @@ Procedures, functions, packages, and triggers
 
 <img width="2748" height="1858" alt="ERD_Diagram" src="https://github.com/user-attachments/assets/402c0c28-e960-4d87-9d59-aaf80e5f7d4f" />
 
-### 3.Sample Data (5–10 Rows)
+### 3.Sample Data 
 
 #### Example queries, e.g.:
 
@@ -243,7 +243,7 @@ An audit or schedule-update trigger
 <img width="958" height="535" alt="Basic_retrieval_audit_logs" src="https://github.com/user-attachments/assets/96518ddb-6711-4c01-a7d4-882c4cfb198f" />
 
 
-### 7.OEM Monitoring (Optional)
+### 7.OEM Monitoring 
 
 #### Oracle Enterprise Manager screenshots for:
 

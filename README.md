@@ -181,9 +181,9 @@ Mining_Equipment_Maintenance_Scheduler/
 
 ### 1.Database Objects (SQL Developer)
 
-### Object browser showing:
+#### Object browser showing:
 
-### All core tables (EQUIPMENT, WORK_ORDERS, EQUIPMENT_ASSIGNMENT, etc.)
+#### All core tables (EQUIPMENT, WORK_ORDERS, EQUIPMENT_ASSIGNMENT, etc.)
 Procedures, functions, packages, and triggers
 
 
@@ -204,11 +204,11 @@ Procedures, functions, packages, and triggers
 
 
 
-Sample Data (5–10 Rows)
+### 3.Sample Data (5–10 Rows)
 
-Example queries, e.g.:
+#### Example queries, e.g.:
 
-SELECT * FROM EQUIPMENT FETCH FIRST 10 ROWS ONLY;
+#### SELECT * FROM EQUIPMENT FETCH FIRST 10 ROWS ONLY;
 
 <img width="959" height="539" alt="sample_data" src="https://github.com/user-attachments/assets/93ecdd34-cf01-4e7f-95d5-977dfaf6b865" />
 
@@ -217,13 +217,11 @@ SELECT * FROM EQUIPMENT FETCH FIRST 10 ROWS ONLY;
 
 
 
+### 4.Procedures / Triggers in Editor
 
+#### PL/SQL editor displaying:
 
-Procedures / Triggers in Editor
-
-PL/SQL editor displaying:
-
-A maintenance procedure (e.g. generating work orders from due schedules)
+#### A maintenance procedure (e.g. generating work orders from due schedules)
 An audit or schedule-update trigger
 
 
@@ -232,158 +230,159 @@ An audit or schedule-update trigger
 
 
 
-Test Results and Execution
+### 5.Test Results and Execution
 
-Anonymous PL/SQL blocks running test scenarios
-DBMS_OUTPUT showing results (e.g. created work orders, calculated KPIs)
-Validation queries confirming constraints and relationships
+#### Anonymous PL/SQL blocks running test scenarios
+#### DBMS_OUTPUT showing results (e.g. created work orders, calculated KPIs)
+#### Validation queries confirming constraints and relationships
 
 
 
 
 
-Audit Log Entries
+### 6.Audit Log Entries
 
-Query against AUDIT_LOG showing:
+### Query against AUDIT_LOG showing:
 
-EVENT_DATETIME, USER_NAME, ACTION_TYPE, TABLE_NAME, RECORD_PK
+#### EVENT_DATETIME, USER_NAME, ACTION_TYPE, TABLE_NAME, RECORD_PK
 
+<img width="958" height="535" alt="Basic_retrieval_audit_logs" src="https://github.com/user-attachments/assets/96518ddb-6711-4c01-a7d4-882c4cfb198f" />
 
 
 
 
 
-OEM Monitoring (Optional)
 
-Oracle Enterprise Manager screenshots for:
 
-Session activity
-Performance metrics
-Tablespace / storage usage
+### 7.OEM Monitoring (Optional)
 
+#### Oracle Enterprise Manager screenshots for:
 
+#### Session activity
+#### Performance metrics
+#### Tablespace / storage usage
 
+<img width="921" height="400" alt="database_overview" src="https://github.com/user-attachments/assets/6a7201a9-612f-4305-8697-bbcff87f4266" />
 
 
+<img width="913" height="236" alt="performance_metrics" src="https://github.com/user-attachments/assets/496d082b-2e2e-484d-a30d-fdc57289724d" />
 
 
-🚀 Quick Start Guide
-Follow these steps to deploy the Mining Equipment Maintenance Scheduler locally.
-Prerequisites
+<img width="919" height="331" alt="sql_monitoring" src="https://github.com/user-attachments/assets/a8d30c95-fa84-408b-9393-d4fbcc1bb8fa" />
 
-Oracle Database 21c (XE or Enterprise Edition)
-Oracle SQL Developer
-Git or GitHub access
 
-Step 1: Database / PDB Creation (If Applicable)
 
 
-Open SQL Developer and connect as SYSDBA.
 
 
-Run database/scripts/01_create_pdb.sql (if included) to create the PDB and schema user.
 
+## 🚀 Quick Start Guide
+#### Follow these steps to deploy the Mining Equipment Maintenance Scheduler locally.
+#### Prerequisites
 
-Verify the PDB is open:
-SELECT name, open_mode FROM v$pdbs;
+#### Oracle Database 21c (XE or Enterprise Edition)
+#### Oracle SQL Developer
+#### Git or GitHub access
 
+#### Step 1: Database / PDB Creation (If Applicable)
 
 
-Step 2: Schema Implementation
+##### Open /SQL Developer and connect as SYSDBA.
 
 
-Connect as the project schema user (e.g. mining_scheduler_user).
+##### Run database/scripts/01_create_pdb.sql (if included) to create the PDB and schema user.
 
 
-Run table and constraint scripts:
-@database/scripts/02_create_tables.sql
-@database/scripts/04_validation.sql      -- Optional structural checks
+##### Verify the PDB is open:
+##### SELECT name, open_mode FROM v$pdbs;
 
 
 
-Confirm tables are created (e.g. SELECT * FROM EQUIPMENT; should return no rows but no errors).
+#### Step 2: Schema Implementation
 
 
-Step 3: Data Population
+##### Connect as the project schema user (e.g. mining_scheduler_user).
 
 
-Run the sample data script:
-@database/scripts/03_insert_data.sql
+##### Run table and constraint scripts:
+##### @database/scripts/02_create_tables.sql
+##### @database/scripts/04_validation.sql      -- Optional structural checks
 
 
 
-Check that key tables are populated:
-SELECT COUNT(*) FROM EQUIPMENT;
-SELECT COUNT(*) FROM WORK_ORDERS;
-SELECT COUNT(*) FROM EQUIPMENT_ASSIGNMENT;
+##### Confirm tables are created (e.g. SELECT * FROM EQUIPMENT; should return no rows but no errors).
 
 
+#### Step 3: Data Population
 
-Step 4: PL/SQL Logic (Procedures, Functions, Packages, Triggers)
 
+##### Run the sample data script:
+##### @database/scripts/03_insert_data.sql
 
-Create program units:
-@database/scripts/05_procedures_functions.sql
-@database/scripts/06_triggers.sql
 
 
+##### Check that key tables are populated:
+##### SELECT COUNT(*) FROM EQUIPMENT;
+##### SELECT COUNT(*) FROM EQUIPMENT_ASSIGNMENT;
 
-Ensure all procedures, functions, packages, and triggers compile successfully in SQL Developer.
 
 
-Step 5: Testing
+#### Step 4: PL/SQL Logic (Procedures, Functions, Packages, Triggers)
 
 
-Enable server output:
-SET SERVEROUTPUT ON;
+##### Create program units:
+##### @database/scripts/05_procedures_functions.sql
+##### @database/scripts/06_triggers.sql
 
 
 
-Execute the test blocks included at the bottom of the scripts (or in queries/):
-@queries/data_retrieval.sql
-@queries/analytics_queries.sql
-@queries/audit_queries.sql
+##### Ensure all procedures, functions, packages, and triggers compile successfully in SQL Developer.
 
 
+#### Step 5: Testing
 
-Confirm:
 
-Assignments are created correctly and double-booking is prevented.
-Work orders and maintenance history behave as expected.
-Downtime and usage logs are captured.
-Audit log entries are generated for configured tables.
+##### Enable server output:
+##### SET SERVEROUTPUT ON;
 
 
 
-Step 6: Documentation & Screenshots
+##### Execute the test blocks included at the bottom of the scripts (or in queries/):
+##### @queries/data_retrieval.sql
+##### @queries/analytics_queries.sql
+##### @queries/audit_queries.sql
 
 
-Review and, if needed, update:
 
-database/documentation/data_dictionary.md
-database/documentation/architecture.md
-database/documentation/design_decisions.md
+#### Step 6: Documentation & Screenshots
 
 
+##### Review and, if needed, update:
 
-Generate / export the ER diagram and save it to:
+##### database/documentation/data_dictionary.md
+##### database/documentation/architecture.md
+##### database/documentation/design_decisions.md
 
-screenshots/database_objects/erd_full_schema.png
 
 
+##### Generate / export the ER diagram and save it to:
 
-Capture screenshots of:
+##### screenshots/database_objects/erd_full_schema.png
 
-Database objects, sample data, code, tests, and audit log
+
+
+ ##### Capture screenshots of:
+
+##### Database objects, sample data, code, tests, and audit log
 Place them under screenshots/database_objects/ and screenshots/test_results/
 
 
 
 
-📊 Business Intelligence
-Key Performance Indicators (KPIs)
+### 📊 Business Intelligence
+#### Key Performance Indicators (KPIs)
 
-Equipment Utilisation (%)
+#### Equipment Utilisation (%)
 
 Operating hours / available shift hours per equipment, shift, or site.
 
@@ -447,4 +446,3 @@ Availability percentage by equipment and site.
 
 
 
-You can tweak the PDB name, user name, and any counts (e.g., number of sample records) to match your actual implementation.

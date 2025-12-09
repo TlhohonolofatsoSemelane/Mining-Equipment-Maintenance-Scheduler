@@ -186,9 +186,7 @@ Mining_Equipment_Maintenance_Scheduler/
 #### All core tables (EQUIPMENT, WORK_ORDERS, EQUIPMENT_ASSIGNMENT, etc.)
 Procedures, functions, packages, and triggers
 
-
-
-
+<img width="570" height="369" alt="Database_Object" src="https://github.com/user-attachments/assets/099738a1-b11f-4635-9980-7f6eb5c2cf71" />
 
 
 ### 2.ER Diagram

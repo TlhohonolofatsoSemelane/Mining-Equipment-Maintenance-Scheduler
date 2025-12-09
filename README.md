@@ -260,106 +260,59 @@ An audit or schedule-update trigger
 <img width="919" height="331" alt="sql_monitoring" src="https://github.com/user-attachments/assets/a8d30c95-fa84-408b-9393-d4fbcc1bb8fa" />
 
 
-## 🚀 Quick Start Guide
-#### Follow these steps to deploy the Mining Equipment Maintenance Scheduler locally.
-#### Prerequisites
+### 🚀 Quick Start Guide
+
+#### Follow these steps to deploy the project locally.
+
+#### Prerequisites:
 
 #### Oracle Database 21c (XE or Enterprise Edition)
+
 #### Oracle SQL Developer
-#### Git or GitHub access
 
-#### Step 1: Database / PDB Creation (If Applicable)
+#### GitHub account
 
+#### Step 1: Database Creation
 
-##### Open /SQL Developer and connect as SYSDBA.
+#### Open SQL Developer and connect as SYSDBA
 
+#### Run database/scripts/01_create_pdb.sql to create the PDB and Admin User
 
-##### Run database/scripts/01_create_pdb.sql (if included) to create the PDB and schema user.
+#### Verify PDB is open:
 
-
-##### Verify the PDB is open:
 ##### SELECT name, open_mode FROM v$pdbs;
-
-
 
 #### Step 2: Schema Implementation
 
+#### Connect as mining_scheduler_admin
 
-##### Connect as the project schema user (e.g. mining_scheduler_user).
+#### Run database/scripts/02_create_tables.sql to build the structure
 
+#### Run database/scripts/03_insert_data.sql to load 100+ sample records
 
-##### Run table and constraint scripts:
-##### @database/scripts/02_create_tables.sql
-##### @database/scripts/04_validation.sql      -- Optional structural checks
+#### Run database/scripts/04_validation.sql to confirm data integrity
 
+#### Step 3: PL/SQL Logic
 
+#### Run database/scripts/05_procedures_functions.sql to create procedures, functions, packages
 
-##### Confirm tables are created (e.g. SELECT * FROM EQUIPMENT; should return no rows but no errors).
+#### Run database/scripts/06_triggers.sql to implement business rules
 
+####Step 4: Testing
 
-#### Step 3: Data Population
+#### Execute test blocks at the end of each script
 
+#### Verify outputs using SET SERVEROUTPUT ON
 
-##### Run the sample data script:
-##### @database/scripts/03_insert_data.sql
+#### Run audit queries to confirm logging works
 
+#### Step 5: Documentation
 
+#### Update documentation/data_dictionary.md with actual table structures
 
-##### Check that key tables are populated:
-##### SELECT COUNT(*) FROM EQUIPMENT;
-##### SELECT COUNT(*) FROM EQUIPMENT_ASSIGNMENT;
+##### Generate ER diagram and save to documentation/
 
-
-
-#### Step 4: PL/SQL Logic (Procedures, Functions, Packages, Triggers)
-
-
-##### Create program units:
-##### @database/scripts/05_procedures_functions.sql
-##### @database/scripts/06_triggers.sql
-
-
-
-##### Ensure all procedures, functions, packages, and triggers compile successfully in SQL Developer.
-
-
-#### Step 5: Testing
-
-
-##### Enable server output:
-##### SET SERVEROUTPUT ON;
-
-
-
-##### Execute the test blocks included at the bottom of the scripts (or in queries/):
-##### @queries/data_retrieval.sql
-##### @queries/analytics_queries.sql
-##### @queries/audit_queries.sql
-
-
-
-#### Step 6: Documentation & Screenshots
-
-
-##### Review and, if needed, update:
-
-##### database/documentation/data_dictionary.md
-##### database/documentation/architecture.md
-##### database/documentation/design_decisions.md
-
-
-
-##### Generate / export the ER diagram and save it to:
-
-##### screenshots/database_objects/erd_full_schema.png
-
-
-
- ##### Capture screenshots of:
-
-##### Database objects, sample data, code, tests, and audit log
-Place them under screenshots/database_objects/ and screenshots/test_results/
-
+#### Take screenshots and organize in screenshots/ folder
 
 
 ## 📊 Business Intelligence

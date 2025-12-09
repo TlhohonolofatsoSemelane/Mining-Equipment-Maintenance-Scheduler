@@ -200,10 +200,6 @@ Procedures, functions, packages, and triggers
 
 <img width="2748" height="1858" alt="ERD_Diagram" src="https://github.com/user-attachments/assets/402c0c28-e960-4d87-9d59-aaf80e5f7d4f" />
 
-
-
-
-
 ### 3.Sample Data (5–10 Rows)
 
 #### Example queries, e.g.:
@@ -212,11 +208,6 @@ Procedures, functions, packages, and triggers
 
 <img width="959" height="539" alt="sample_data" src="https://github.com/user-attachments/assets/93ecdd34-cf01-4e7f-95d5-977dfaf6b865" />
 
-
-
-
-
-
 ### 4.Procedures / Triggers in Editor
 
 #### PL/SQL editor displaying:
@@ -224,10 +215,13 @@ Procedures, functions, packages, and triggers
 #### A maintenance procedure (e.g. generating work orders from due schedules)
 An audit or schedule-update trigger
 
+<img width="959" height="528" alt="02_procedures" src="https://github.com/user-attachments/assets/f8c75479-847a-47ce-8415-fd07d81d7930" />
 
+<img width="959" height="501" alt="03_functions" src="https://github.com/user-attachments/assets/6d0871ca-00b4-4de0-88ff-1662a124c0e1" />
 
+ <img width="959" height="538" alt="04_simple_triggers" src="https://github.com/user-attachments/assets/deed8975-0cf6-4f44-b92b-8ac284c72f91" />
 
-
+ <img width="959" height="533" alt="05_compound_trigger" src="https://github.com/user-attachments/assets/9319a46e-802b-44c0-b539-ecea1369269b" />
 
 
 ### 5.Test Results and Execution
@@ -236,9 +230,11 @@ An audit or schedule-update trigger
 #### DBMS_OUTPUT showing results (e.g. created work orders, calculated KPIs)
 #### Validation queries confirming constraints and relationships
 
+<img width="959" height="536" alt="06_comprehensive_testing" src="https://github.com/user-attachments/assets/9ee593eb-ea04-450f-b537-307a7505a44d" />
 
+<img width="955" height="539" alt="08_testing_procedures" src="https://github.com/user-attachments/assets/3bcb1cfe-ccbf-4342-aece-0891ea0d6b0e" />
 
-
+<img width="959" height="527" alt="09_testing_functions" src="https://github.com/user-attachments/assets/ff94aa35-0145-4131-bbed-47a55423cf03" />
 
 ### 6.Audit Log Entries
 
@@ -247,11 +243,6 @@ An audit or schedule-update trigger
 #### EVENT_DATETIME, USER_NAME, ACTION_TYPE, TABLE_NAME, RECORD_PK
 
 <img width="958" height="535" alt="Basic_retrieval_audit_logs" src="https://github.com/user-attachments/assets/96518ddb-6711-4c01-a7d4-882c4cfb198f" />
-
-
-
-
-
 
 
 ### 7.OEM Monitoring (Optional)
@@ -264,16 +255,9 @@ An audit or schedule-update trigger
 
 <img width="921" height="400" alt="database_overview" src="https://github.com/user-attachments/assets/6a7201a9-612f-4305-8697-bbcff87f4266" />
 
-
 <img width="913" height="236" alt="performance_metrics" src="https://github.com/user-attachments/assets/496d082b-2e2e-484d-a30d-fdc57289724d" />
 
-
 <img width="919" height="331" alt="sql_monitoring" src="https://github.com/user-attachments/assets/a8d30c95-fa84-408b-9393-d4fbcc1bb8fa" />
-
-
-
-
-
 
 
 ## 🚀 Quick Start Guide
